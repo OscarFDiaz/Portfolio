@@ -2,7 +2,7 @@ import 'animate.css';
 
 import { ArrowDown } from '../assets/icons/ArrowDown';
 import Picture from '../assets/picture.webp';
-import Picture2 from '../assets/gradient.png';
+import Gradient from '../assets/gradient.webp';
 
 import MyPDF from '../assets/cv.pdf';
 import { ScrollDown } from '../assets/icons/ScrollDown';
@@ -11,7 +11,7 @@ export const SectionMain = () => {
   return (
     <section className="section">
       <div className="section__background">
-        <img loading="lazy" src={Picture2} alt="Degradado azul " />
+        <img loading="lazy" src={Gradient} alt="Degradado azul " />
       </div>
       <div className="section__imagetext">
         <picture className="imagetext__picture">

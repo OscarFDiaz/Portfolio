@@ -195,14 +195,13 @@ $b2: #c778dd;
 
     animation: topToBottom 5s linear infinite 0s;
   }
-}
 
-.subtitles__span:nth-of-type(1) {
-  animation-delay: 1s;
-}
-
-.subtitles__span:nth-of-type(2) {
-  animation-delay: 2.5s;
+  &__span:nth-of-type(1) {
+    animation-delay: 1s;
+  }
+  &__span:nth-of-type(2) {
+    animation-delay: 2.5s;
+  }
 }
 
 .svg__scrolldown {
@@ -212,9 +211,6 @@ $b2: #c778dd;
 
   @include mediaQuery(480px) {
     display: none;
-  }
-  &:hover {
-    fill: white;
   }
 }
 

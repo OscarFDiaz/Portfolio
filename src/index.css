@@ -486,11 +486,9 @@ body {
   opacity: 0;
   animation: topToBottom 5s linear infinite 0s;
 }
-
 .subtitles__span:nth-of-type(1) {
   animation-delay: 1s;
 }
-
 .subtitles__span:nth-of-type(2) {
   animation-delay: 2.5s;
 }
@@ -504,9 +502,6 @@ body {
   .svg__scrolldown {
     display: none;
   }
-}
-.svg__scrolldown:hover {
-  fill: white;
 }
 
 @keyframes topToBottom {
