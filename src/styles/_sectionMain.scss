@@ -1,0 +1,244 @@
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+
+// Mixins
+@mixin fontConfig($size: 1.5rem, $weight: 500, $text: uppercase) {
+  font-family: Poppins;
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: normal;
+  text-transform: $text;
+}
+
+@mixin flexConfig($dir: row, $jcont: space-around, $aitems: center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jcont;
+  align-items: $aitems;
+}
+
+@mixin mediaQuery($maxWidth: 920px) {
+  @media (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+@mixin hoverNone {
+  @media (hover: none) {
+    @content;
+  }
+}
+
+@mixin container($padding: 32px 0) {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $padding;
+  @include mediaQuery(760px) {
+    padding: 1rem;
+  }
+}
+
+// Styles
+.imagetext {
+  &__picture {
+    width: 10.9375rem;
+    height: 10.9375rem;
+    @include mediaQuery(480px) {
+      margin: 0 auto;
+    }
+  }
+}
+.paragraph {
+  &__b {
+    color: $white;
+  }
+}
+.section {
+  @include container(1rem 0);
+  @include flexConfig(column, center, flex-start);
+
+  @include mediaQuery(1024px) {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @include mediaQuery(480px) {
+    gap: 2rem;
+  }
+  gap: 3rem;
+
+  &__anchor {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    border: 1px solid $b2;
+
+    text-transform: uppercase;
+
+    @include mediaQuery(480px) {
+      width: 100%;
+    }
+
+    @include hoverNone() {
+      border: 2px solid $b2;
+      color: $white;
+      background: rgba(199, 120, 221, 0.2);
+
+      /* Blur_Shadow */
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+      transition: color, box-shadow, 0.3s linear;
+    }
+  }
+
+  &__anchor:hover {
+    border: 2px solid $b2;
+    color: $white;
+    background: rgba(199, 120, 221, 0.2);
+
+    /* Blur_Shadow */
+    box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+    transition: color, box-shadow, 0.3s linear;
+  }
+
+  &__background {
+    height: 46.875rem;
+    width: 46.875rem;
+    position: absolute;
+    right: 0;
+    top: 5%;
+    z-index: -1;
+  }
+
+  &__imagetext {
+    width: 100%;
+    @include flexConfig(row, flex-start);
+    gap: 2rem;
+
+    @include mediaQuery(1024px) {
+      @include flexConfig(column, center, center);
+    }
+
+    @include mediaQuery(480px) {
+      @include flexConfig(column, center, flex-start);
+    }
+  }
+  &__shortabout {
+    @include fontConfig(1.2rem, 400, none);
+    @include mediaQuery(1024px) {
+      text-align: center;
+    }
+  }
+  &__subtitle {
+    @include fontConfig(5rem, 600);
+    display: flex;
+    color: $b2;
+
+    @include mediaQuery(1024px) {
+      @include fontConfig(2rem, 600);
+    }
+    @include mediaQuery(480px) {
+      @include fontConfig(1.7rem, 600);
+    }
+  }
+  &__title {
+    @include fontConfig(4rem, 600);
+    margin-bottom: -2rem;
+    @include mediaQuery(1024px) {
+      @include fontConfig(2rem, 600);
+      margin-bottom: 0;
+    }
+  }
+  &__titles {
+    @include flexConfig(column, center, flex-start);
+  }
+}
+.shortabout {
+  &__paragraph {
+    hyphens: balanced;
+    @include mediaQuery(480px) {
+      text-align: left;
+      font-size: 1rem;
+    }
+  }
+}
+
+// Words container
+.subtitle {
+  &__subtitles {
+    @include fontConfig(5rem, 600);
+    position: relative;
+    white-space: nowrap;
+    @include mediaQuery(1024px) {
+      @include fontConfig(2rem, 600);
+    }
+    @include mediaQuery(480px) {
+      @include fontConfig(1.7rem, 600);
+    }
+  }
+}
+.subtitles {
+  &__span {
+    color: $white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-transform: uppercase;
+    opacity: 0;
+
+    animation: topToBottom 5s linear infinite 0s;
+  }
+}
+
+.subtitles__span:nth-of-type(1) {
+  animation-delay: 1s;
+}
+
+.subtitles__span:nth-of-type(2) {
+  animation-delay: 2.5s;
+}
+
+.svg__scrolldown {
+  position: fixed;
+  right: 1rem;
+  bottom: 2%;
+
+  @include mediaQuery(480px) {
+    display: none;
+  }
+  &:hover {
+    fill: white;
+  }
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  10% {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+  30% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 0;
+  }
+}

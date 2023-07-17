@@ -1,8 +1,8 @@
-$padding-container: 32px 0;
 $white: #fff;
 $b1: #282c33;
 $b2: #c778dd;
 
+// Mixins
 @mixin fontConfig {
   font-family: Poppins;
   font-size: 1.5rem;
@@ -24,13 +24,7 @@ $b2: #c778dd;
   }
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: $padding-container;
-}
+// Styles
 
 .anchor {
   &__hash {
@@ -46,12 +40,14 @@ $b2: #c778dd;
   // Anchor click
   &__anchor:focus {
     color: $white;
-    transition: color 0.3s linear;
+    font-weight: 600;
+    transition: color, font-weight, 0.3s linear;
   }
   &__anchor:focus {
     .anchor__hash {
       color: $b2;
-      transition: color 0.3s linear;
+      font-weight: 600;
+      transition: color, font-weight, 0.3s linear;
     }
   }
 
@@ -81,7 +77,7 @@ $b2: #c778dd;
 }
 
 .navigator {
-  @include flexConfig(row, space-around);
+  @include flexConfig(row, space-between);
 
   @include fontConfig();
 
@@ -94,9 +90,6 @@ $b2: #c778dd;
       gap: 1rem;
     }
     @include mediaQuery(810px) {
-      gap: 0.5rem;
-    }
-    @include mediaQuery(780px) {
       gap: 0;
     }
     @include mediaQuery(760px) {
@@ -109,10 +102,7 @@ $b2: #c778dd;
     @include flexConfig(row, space-between);
     gap: 1rem;
     cursor: pointer;
-  }
-  &__select:hover {
     color: $white;
-    transition: color 0.3s linear;
   }
 
   //   <OSCAR DIAZ/> container

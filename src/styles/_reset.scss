@@ -11,6 +11,9 @@
   /* Tipografía */
   --tipo-principal: 'Poppins', sans-serif;
   --tipo-secundaria: 'Poppins', sans-serif;
+
+  // Contenedor
+  --padding-container: 32px 0;
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
@@ -171,4 +174,21 @@ body {
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--b-1);
+}
+
+@mixin mediaQuery($maxWidth: 920px) {
+  @media (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+  @include mediaQuery(760px) {
+    padding: 1rem;
+  }
 }
