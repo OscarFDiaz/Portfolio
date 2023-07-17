@@ -1,0 +1,131 @@
+$padding-container: 32px 0;
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+
+@mixin fontConfig {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+@mixin flexConfig($dir: row, $jcont: space-around) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jcont;
+}
+
+@mixin mediaQuery($maxWidth: 920px) {
+  @media (max-width: $maxWidth) {
+    @content;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: $padding-container;
+}
+
+.anchor {
+  &__hash {
+    color: $b1;
+  }
+}
+
+.item {
+  &__anchor {
+    //Not needed
+  }
+
+  // Anchor click
+  &__anchor:focus {
+    color: $white;
+    transition: color 0.3s linear;
+  }
+  &__anchor:focus {
+    .anchor__hash {
+      color: $b2;
+      transition: color 0.3s linear;
+    }
+  }
+
+  //   Anchor hover
+  &__anchor:hover {
+    color: $white;
+    transition: color 0.5s linear;
+  }
+}
+
+.list {
+  &__item {
+    // Not needed
+  }
+}
+
+// <OSCAR DIAZ/>
+.name {
+  // <
+  &__arrow {
+    color: $b2;
+  }
+  // OSCAR DIAZ
+  &__name {
+    color: $white;
+  }
+}
+
+.navigator {
+  @include flexConfig(row, space-around);
+
+  @include fontConfig();
+
+  //   UL list
+  &__list {
+    @include flexConfig(row, center);
+    gap: 3rem;
+
+    @include mediaQuery() {
+      gap: 1rem;
+    }
+    @include mediaQuery(810px) {
+      gap: 0.5rem;
+    }
+    @include mediaQuery(780px) {
+      gap: 0;
+    }
+    @include mediaQuery(760px) {
+      display: none;
+    }
+  }
+
+  //   Lang select
+  &__select {
+    @include flexConfig(row, space-between);
+    gap: 1rem;
+    cursor: pointer;
+  }
+  &__select:hover {
+    color: $white;
+    transition: color 0.3s linear;
+  }
+
+  //   <OSCAR DIAZ/> container
+  &__name {
+    display: flex;
+  }
+}
+
+.select {
+  appearance: menulist;
+  cursor: pointer;
+  &__option {
+    background-color: $b1;
+    color: $white;
+  }
+}

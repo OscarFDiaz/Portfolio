@@ -1,3 +1,9 @@
+import { Navigator } from './layouts/Navigator';
+
 export const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return (
+    <>
+      <Navigator />
+    </>
+  );
 };

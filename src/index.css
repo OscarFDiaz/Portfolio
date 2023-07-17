@@ -2,10 +2,15 @@
 /* Definimos las Custom properties */
 :root {
   /* Colores */
-  --negro: #393939;
+  --b-1: #282c33;
+  --b-2: #c778dd;
+  --b-3: #abb2bf;
+  --b-4: #222;
+  --negro: #000;
+  --blanco: #fff;
   /* Tipografía */
-  --tipo-principal: 'Poppins', sans-serif;
-  --tipo-secundaria: 'Poppins', sans-serif;
+  --tipo-principal: "Poppins", sans-serif;
+  --tipo-secundaria: "Poppins", sans-serif;
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
@@ -104,7 +109,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -141,7 +146,7 @@ td {
 
 /* Evitamos problemas con los SVG */
 svg {
-  width: 100%;
+  width: 24px;
   display: block;
   fill: currentColor;
 }
@@ -151,7 +156,7 @@ body {
   min-height: 100vh;
   font-size: 100%;
   font-family: var(--tipo-principal);
-  color: var(--negro);
+  color: var(--b-3);
   /* (Opcional) */
   hyphens: auto;
   /* (Opcional) */
@@ -160,6 +165,100 @@ body {
   -webkit-font-smoothing: antialiased;
   /* (Opcional) */
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--b-1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 32px 0;
+}
+
+.anchor__hash {
+  color: #282c33;
+}
+
+.item__anchor:focus {
+  color: #fff;
+  transition: color 0.3s linear;
+}
+.item__anchor:focus .anchor__hash {
+  color: #c778dd;
+  transition: color 0.3s linear;
+}
+.item__anchor:hover {
+  color: #fff;
+  transition: color 0.5s linear;
+}
+
+.name__arrow {
+  color: #c778dd;
+}
+.name__name {
+  color: #fff;
+}
+
+.navigator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.navigator__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+@media (max-width: 920px) {
+  .navigator__list {
+    gap: 1rem;
+  }
+}
+@media (max-width: 810px) {
+  .navigator__list {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 780px) {
+  .navigator__list {
+    gap: 0;
+  }
+}
+@media (max-width: 760px) {
+  .navigator__list {
+    display: none;
+  }
+}
+.navigator__select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+.navigator__select:hover {
+  color: #fff;
+  transition: color 0.3s linear;
+}
+.navigator__name {
+  display: flex;
+}
+
+.select {
+  appearance: menulist;
+  cursor: pointer;
+}
+.select__option {
+  background-color: #282c33;
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */
