@@ -2,7 +2,7 @@ import { NavigatorList, NavigatorName, NavigatorSelect } from '../components/Nav
 
 export const Navigator = () => {
   return (
-    <nav className="navigator">
+    <nav className="navigator" id="home">
       <NavigatorName />
       <NavigatorList />
       <NavigatorSelect />

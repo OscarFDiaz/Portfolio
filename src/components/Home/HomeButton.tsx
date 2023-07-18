@@ -1,5 +1,5 @@
 import { ArrowDown } from '../../assets/icons/ArrowDown';
-import MyPDF from '../assets/cv.pdf';
+import MyPDF from '../../assets/cv.pdf';
 
 export const HomeButton = () => {
   return (

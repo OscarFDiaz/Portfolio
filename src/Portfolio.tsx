@@ -4,8 +4,12 @@ import { SectionMain } from './layouts/SectionMain';
 export const Portfolio = () => {
   return (
     <>
-      <Navigator />
-      <SectionMain />
+      <header>
+        <Navigator />
+      </header>
+      <main>
+        <SectionMain />
+      </main>
     </>
   );
 };
