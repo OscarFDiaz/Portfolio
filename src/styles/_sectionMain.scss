@@ -42,34 +42,25 @@ $b2: #c778dd;
 }
 
 // Styles
-.imagetext {
-  &__picture {
-    width: 10.9375rem;
-    height: 10.9375rem;
-    @include mediaQuery(480px) {
-      margin: 0 auto;
-    }
-  }
-}
-.paragraph {
-  &__b {
-    color: $white;
-  }
-}
 .section {
   @include container(1rem 0);
   @include flexConfig(column, center, flex-start);
 
+  // All content in this section
   @include mediaQuery(1024px) {
     align-items: center;
+    gap: 0.5rem;
+  }
+  @include mediaQuery(1400px) {
     gap: 1rem;
   }
-
   @include mediaQuery(480px) {
     gap: 2rem;
   }
+
   gap: 3rem;
 
+  // Download CV button
   &__anchor {
     display: flex;
     padding: 1rem 2rem;
@@ -85,6 +76,7 @@ $b2: #c778dd;
       width: 100%;
     }
 
+    // If device cant hover
     @include hoverNone() {
       border: 2px solid $b2;
       color: $white;
@@ -96,7 +88,6 @@ $b2: #c778dd;
       transition: color, box-shadow, 0.3s linear;
     }
   }
-
   &__anchor:hover {
     border: 2px solid $b2;
     color: $white;
@@ -108,6 +99,7 @@ $b2: #c778dd;
     transition: color, box-shadow, 0.3s linear;
   }
 
+  // Gradient image
   &__background {
     height: 46.875rem;
     width: 46.875rem;
@@ -117,9 +109,11 @@ $b2: #c778dd;
     z-index: -1;
   }
 
+  // My image and the text container
   &__imagetext {
-    width: 100%;
     @include flexConfig(row, flex-start);
+
+    width: 100%;
     gap: 2rem;
 
     @include mediaQuery(1024px) {
@@ -130,12 +124,33 @@ $b2: #c778dd;
       @include flexConfig(column, center, flex-start);
     }
   }
+
+  // Short about me container
   &__shortabout {
     @include fontConfig(1.2rem, 400, none);
     @include mediaQuery(1024px) {
       text-align: center;
     }
   }
+
+  // Iam Oscar... and #ui/front container
+  &__titles {
+    @include flexConfig(column, center, flex-start);
+    @include fontConfig(4rem, 600);
+  }
+}
+
+.titles {
+  // Iam Oscar Diaz
+  &__title {
+    margin-bottom: -2rem;
+    @include mediaQuery(1024px) {
+      @include fontConfig(2rem, 600);
+      margin-bottom: 0;
+    }
+  }
+
+  // #front/ui container
   &__subtitle {
     @include fontConfig(5rem, 600);
     display: flex;
@@ -148,21 +163,29 @@ $b2: #c778dd;
       @include fontConfig(1.7rem, 600);
     }
   }
-  &__title {
-    @include fontConfig(4rem, 600);
-    margin-bottom: -2rem;
-    @include mediaQuery(1024px) {
-      @include fontConfig(2rem, 600);
-      margin-bottom: 0;
+}
+
+// My picure and the text 'Iam, #ui/frontend'
+.imagetext {
+  &__picture {
+    width: 10.9375rem;
+    height: 10.9375rem;
+    @include mediaQuery(480px) {
+      margin: 0 auto;
     }
   }
-  &__titles {
-    @include flexConfig(column, center, flex-start);
+}
+//
+.paragraph {
+  &__b {
+    color: $white;
   }
 }
+
 .shortabout {
   &__paragraph {
     hyphens: balanced;
+    white-space: pre-line;
     @include mediaQuery(480px) {
       text-align: left;
       font-size: 1rem;

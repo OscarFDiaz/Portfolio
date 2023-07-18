@@ -252,20 +252,6 @@ body {
   color: #fff;
 }
 
-.imagetext__picture {
-  width: 10.9375rem;
-  height: 10.9375rem;
-}
-@media (max-width: 480px) {
-  .imagetext__picture {
-    margin: 0 auto;
-  }
-}
-
-.paragraph__b {
-  color: #fff;
-}
-
 .section {
   width: 90%;
   max-width: 1200px;
@@ -285,6 +271,11 @@ body {
 @media (max-width: 1024px) {
   .section {
     align-items: center;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 1400px) {
+  .section {
     gap: 1rem;
   }
 }
@@ -334,11 +325,11 @@ body {
   z-index: -1;
 }
 .section__imagetext {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
   gap: 2rem;
 }
 @media (max-width: 1024px) {
@@ -370,7 +361,34 @@ body {
     text-align: center;
   }
 }
-.section__subtitle {
+.section__titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Poppins;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.titles__title {
+  margin-bottom: -2rem;
+}
+@media (max-width: 1024px) {
+  .titles__title {
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+.titles__subtitle {
   font-family: Poppins;
   font-size: 5rem;
   font-style: normal;
@@ -381,7 +399,7 @@ body {
   color: #c778dd;
 }
 @media (max-width: 1024px) {
-  .section__subtitle {
+  .titles__subtitle {
     font-family: Poppins;
     font-size: 2rem;
     font-style: normal;
@@ -391,7 +409,7 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .section__subtitle {
+  .titles__subtitle {
     font-family: Poppins;
     font-size: 1.7rem;
     font-style: normal;
@@ -400,35 +418,24 @@ body {
     text-transform: uppercase;
   }
 }
-.section__title {
-  font-family: Poppins;
-  font-size: 4rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: uppercase;
-  margin-bottom: -2rem;
+
+.imagetext__picture {
+  width: 10.9375rem;
+  height: 10.9375rem;
 }
-@media (max-width: 1024px) {
-  .section__title {
-    font-family: Poppins;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-bottom: 0;
+@media (max-width: 480px) {
+  .imagetext__picture {
+    margin: 0 auto;
   }
 }
-.section__titles {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+
+.paragraph__b {
+  color: #fff;
 }
 
 .shortabout__paragraph {
   hyphens: balanced;
+  white-space: pre-line;
 }
 @media (max-width: 480px) {
   .shortabout__paragraph {

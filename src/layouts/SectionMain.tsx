@@ -18,8 +18,8 @@ export const SectionMain = () => {
           <img loading="lazy" src={Picture} alt="Portrait of Oscar Diaz " />
         </picture>
         <div className="section__titles">
-          <h1 className="section__title">I am Oscar Diaz</h1>
-          <div className="section__subtitle">
+          <h1 className="titles__title">I am Oscar Diaz</h1>
+          <div className="titles__subtitle">
             <p>#</p>
             <p className="subtitle__subtitles">
               <span className="subtitles__span">Front-end developer</span>
@@ -31,15 +31,11 @@ export const SectionMain = () => {
 
       <div className="section__shortabout">
         <p className="shortabout__paragraph">
-          Graduated in in <b className="paragraph__b">Computer Engineering</b> from the
-          University of Guadalajara.
-          <br />
-          <br />
-          Current focus as <b className="paragraph__b">Front-End Developer</b>, I have
-          experience in UI and UX design.
-          <br />
-          Passionate about creating attractive and functional interfaces that improve the
-          user experience.
+          Graduated in <b className="paragraph__b">Computer Engineering</b> from the
+          University of Guadalajara. &#10; &#10; Current focus as{' '}
+          <b className="paragraph__b">Front-End Developer</b>, I have experience in UI and
+          UX design. &#10; Passionate about creating attractive and functional interfaces
+          that improve the user experience.
         </p>
       </div>
       <a
