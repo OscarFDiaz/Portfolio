@@ -1,7 +1,11 @@
-export const ScrollDown = () => {
+interface Props {
+  className?: string;
+}
+
+export const ScrollDown = ({ className }: Props) => {
   return (
     <svg
-      className="svg__scrolldown"
+      className={className}
       width="30"
       height="216"
       viewBox="0 0 30 216"

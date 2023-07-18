@@ -138,6 +138,16 @@ $b2: #c778dd;
     @include flexConfig(column, center, flex-start);
     @include fontConfig(4rem, 600);
   }
+
+  &__svg {
+    position: fixed;
+    right: 1rem;
+    bottom: 2%;
+
+    @include mediaQuery(660px) {
+      display: none;
+    }
+  }
 }
 
 .titles {
@@ -224,16 +234,6 @@ $b2: #c778dd;
   }
   &__span:nth-of-type(2) {
     animation-delay: 2.5s;
-  }
-}
-
-.svg__scrolldown {
-  position: fixed;
-  right: 1rem;
-  bottom: 2%;
-
-  @include mediaQuery(480px) {
-    display: none;
   }
 }
 

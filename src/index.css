@@ -373,6 +373,16 @@ body {
   line-height: normal;
   text-transform: uppercase;
 }
+.section__svg {
+  position: fixed;
+  right: 1rem;
+  bottom: 2%;
+}
+@media (max-width: 660px) {
+  .section__svg {
+    display: none;
+  }
+}
 
 .titles__title {
   margin-bottom: -2rem;
@@ -489,17 +499,6 @@ body {
 }
 .subtitles__span:nth-of-type(2) {
   animation-delay: 2.5s;
-}
-
-.svg__scrolldown {
-  position: fixed;
-  right: 1rem;
-  bottom: 2%;
-}
-@media (max-width: 480px) {
-  .svg__scrolldown {
-    display: none;
-  }
 }
 
 @keyframes topToBottom {
