@@ -1,4 +1,4 @@
-import Picture from '../assets/picture.webp';
+import Picture from '../../assets/picture.webp';
 
 export const HomeImgText = () => {
   return (
