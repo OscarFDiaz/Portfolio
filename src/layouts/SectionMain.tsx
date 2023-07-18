@@ -1,7 +1,6 @@
-import { ScrollDown } from '../assets/icons/ScrollDown';
-
 import { HomeAbout, HomeGradient, HomeImgText } from '../components/Home';
 import { HomeButton } from '../components/Home/HomeButton';
+import { SocialIcons } from './SocialIcons';
 
 export const SectionMain = () => {
   return (
@@ -10,7 +9,8 @@ export const SectionMain = () => {
       <HomeImgText />
       <HomeAbout />
       <HomeButton />
-      <ScrollDown className={'section__svg'} />
+
+      <SocialIcons />
     </section>
   );
 };

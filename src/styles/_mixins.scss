@@ -7,11 +7,12 @@
   text-transform: $transform;
 }
 
-@mixin flex($dir: row, $justify: space-around, $align: center) {
+@mixin flex($dir: row, $justify: space-around, $align: center, $content: center) {
   display: flex;
   flex-direction: $dir;
   justify-content: $justify;
   align-items: $align;
+  align-content: $content;
 }
 
 @mixin media($maxWidth: 920px) {

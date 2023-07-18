@@ -66,6 +66,8 @@ $padding: 2rem;
 
   @include container(32px 0);
 
+  position: sticky;
+
   //   UL list
   &__list {
     @include flex(row, center);

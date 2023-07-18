@@ -200,6 +200,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   font-family: Poppins;
   font-size: 1.2rem;
   font-style: normal;
@@ -210,6 +211,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 0;
+  position: sticky;
 }
 @media (max-width: 760px) {
   .navigator {
@@ -221,6 +223,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-content: center;
   gap: 3rem;
 }
 @media (max-width: 920px) {
@@ -238,6 +241,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   gap: 1rem;
   cursor: pointer;
   color: #fff;
@@ -262,8 +266,9 @@ body {
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  align-content: center;
   gap: 3rem;
 }
 @media (max-width: 760px) {
@@ -279,12 +284,17 @@ body {
 }
 @media (max-width: 1400px) {
   .section {
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 @media (max-width: 480px) {
   .section {
     gap: 2rem;
+  }
+}
+@media (min-width: 1920px) {
+  .section {
+    padding: 5rem 0;
   }
 }
 .section__anchor {
@@ -321,10 +331,12 @@ body {
 }
 .section__background {
   height: 46.875rem;
-  width: 46.875rem;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 5%;
+  width: 46.875rem;
+  height: 95%;
   z-index: -1;
 }
 .section__imagetext {
@@ -332,6 +344,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  align-content: center;
   width: 100%;
   gap: 2rem;
 }
@@ -339,8 +352,9 @@ body {
   .section__imagetext {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
   }
 }
 @media (max-width: 480px) {
@@ -349,6 +363,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    align-content: center;
   }
 }
 .section__shortabout {
@@ -361,7 +376,7 @@ body {
 }
 @media (max-width: 1024px) {
   .section__shortabout {
-    text-align: center;
+    text-align: left;
   }
 }
 .section__titles {
@@ -369,6 +384,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  align-content: center;
   font-family: Poppins;
   font-size: 4rem;
   font-style: normal;
@@ -533,6 +549,91 @@ body {
   100% {
     opacity: 0;
   }
+}
+.social__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  width: 100%;
+}
+.social__h2 {
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #abb2bf;
+}
+.social__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+@media (max-width: 480px) {
+  .social__icons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.social__span {
+  color: #c778dd;
+}
+.social__anchor {
+  position: relative;
+}
+.social__anchor:hover .social__svgspan {
+  opacity: 1;
+  display: flex;
+}
+.social__anchor:hover .social__svgspan svg {
+  stroke: #c778dd;
+}
+.social__svgspan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1rem;
+  background-color: #282c33;
+  border: 2px solid #c778dd;
+  color: #fff;
+  height: 3rem;
+  opacity: 1;
+  display: none;
+  padding: 1rem;
+  width: auto;
+  white-space: nowrap;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  top: -4rem;
+  z-index: 1;
+}
+.social__svg {
+  width: 3.375rem;
+  height: 3.375rem;
+  fill: none;
+}
+.social__svg:hover {
+  stroke: #c778dd;
+  filter: drop-shadow(0px 6px 40px rgba(112, 144, 176, 0.2));
+  transition: stroke, fill, box-shadow, 0.3s linear;
+}
+.social__svg:hover path {
+  fill: #282c33;
+  stroke: #282c33;
+  transition: stroke, fill, box-shadow, 0.3s linear;
+}
+.social__svg:hover rect {
+  fill: #c778dd;
+  stroke: #c778dd;
+  transition: stroke, fill, box-shadow, 0.3s linear;
 }
 
 /*# sourceMappingURL=index.css.map */

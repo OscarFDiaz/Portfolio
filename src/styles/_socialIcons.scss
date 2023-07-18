@@ -1,0 +1,82 @@
+@import 'mixins';
+
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+$b3: #abb2bf;
+$padding: 2rem;
+
+.social {
+  &__container {
+    @include flex(column, center, flex-start);
+    width: 100%;
+  }
+  &__h2 {
+    @include font(1.25rem, 600, uppercase);
+    color: $b3;
+  }
+  &__icons {
+    @include flex(row, flex-start, center);
+    gap: 1rem;
+
+    @include media(480px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  &__span {
+    color: $b2;
+  }
+  &__anchor {
+    position: relative;
+  }
+  &__anchor:hover &__svgspan {
+    opacity: 1;
+    display: flex;
+    & svg {
+      stroke: $b2;
+    }
+  }
+
+  &__svgspan {
+    @include flex(row, center, center);
+    gap: 1rem;
+
+    background-color: $b1;
+    border: 2px solid $b2;
+    color: $white;
+    height: 3rem;
+    opacity: 1;
+    display: none;
+    padding: 1rem;
+    width: auto;
+    white-space: nowrap;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    top: -4rem;
+    z-index: 1;
+  }
+
+  &__svg {
+    width: 3.375rem;
+    height: 3.375rem;
+    fill: none;
+
+    &:hover {
+      stroke: $b2;
+      filter: drop-shadow(0px 6px 40px rgba(112, 144, 176, 0.2));
+      transition: stroke, fill, box-shadow, 0.3s linear;
+    }
+    &:hover path {
+      fill: $b1;
+      stroke: $b1;
+      transition: stroke, fill, box-shadow, 0.3s linear;
+    }
+    &:hover rect {
+      fill: $b2;
+      stroke: $b2;
+      transition: stroke, fill, box-shadow, 0.3s linear;
+    }
+  }
+}
