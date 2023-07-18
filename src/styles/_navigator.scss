@@ -100,6 +100,7 @@ $padding: 2rem;
     gap: 3rem;
 
     @include mediaQuery(920px) {
+      // Gap between navigator elements
       gap: 0.5rem;
     }
     @include mediaQuery(760px) {
