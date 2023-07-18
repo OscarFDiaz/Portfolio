@@ -1,4 +1,4 @@
-import Gradient from '../../assets/gradient.webp';
+import Gradient from '../../assets/gradient.svg';
 
 export const HomeGradient = () => {
   return (
