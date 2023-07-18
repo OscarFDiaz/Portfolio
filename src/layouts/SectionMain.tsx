@@ -1,15 +1,13 @@
-import 'animate.css';
-
 import { ArrowDown } from '../assets/icons/ArrowDown';
+import { ScrollDown } from '../assets/icons/ScrollDown';
+
 import Picture from '../assets/picture.webp';
 import Gradient from '../assets/gradient.webp';
-
 import MyPDF from '../assets/cv.pdf';
-import { ScrollDown } from '../assets/icons/ScrollDown';
 
 export const SectionMain = () => {
   return (
-    <section className="section">
+    <section className="section" id="home">
       <div className="section__background">
         <img loading="lazy" src={Gradient} alt="Degradado azul " />
       </div>

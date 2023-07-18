@@ -1,4 +1,4 @@
-import { NavigatorListItem } from './NavigatorListItem';
+import { NavigatorListItem } from '.';
 
 export const NavigatorList = () => {
   return (

@@ -1,4 +1,4 @@
-import { navigatorItems } from '../helpers/json/navigatorItems';
+import { navigatorItems } from '../../helpers/json/navigatorItems';
 
 export const NavigatorListItem = () => {
   const menuItems = navigatorItems;

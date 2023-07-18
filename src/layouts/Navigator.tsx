@@ -1,6 +1,4 @@
-import { NavigatorList } from '../components/NavigatorList';
-import { NavigatorName } from '../components/NavigatorName';
-import { NavigatorSelect } from '../components/NavigatorSelect';
+import { NavigatorList, NavigatorName, NavigatorSelect } from '../components/Navigator';
 
 export const Navigator = () => {
   return (
