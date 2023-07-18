@@ -1,60 +1,24 @@
+// Mixins
+@import 'mixins';
+
 $white: #fff;
 $b1: #282c33;
 $b2: #c778dd;
 
-// Mixins
-@mixin fontConfig($size: 1.5rem, $weight: 500, $text: uppercase) {
-  font-family: Poppins;
-  font-size: $size;
-  font-style: normal;
-  font-weight: $weight;
-  line-height: normal;
-  text-transform: $text;
-}
-
-@mixin flexConfig($dir: row, $jcont: space-around, $aitems: center) {
-  display: flex;
-  flex-direction: $dir;
-  justify-content: $jcont;
-  align-items: $aitems;
-}
-
-@mixin mediaQuery($maxWidth: 920px) {
-  @media (max-width: $maxWidth) {
-    @content;
-  }
-}
-
-@mixin hoverNone {
-  @media (hover: none) {
-    @content;
-  }
-}
-
-@mixin container($padding: 32px 0) {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: $padding;
-  @include mediaQuery(760px) {
-    padding: 1rem;
-  }
-}
-
 // Styles
 .section {
   @include container(1rem 0);
-  @include flexConfig(column, center, flex-start);
+  @include flex(column, center, flex-start);
 
   // All content in this section
-  @include mediaQuery(1024px) {
+  @include media(1024px) {
     align-items: center;
     gap: 0.5rem;
   }
-  @include mediaQuery(1400px) {
+  @include media(1400px) {
     gap: 1rem;
   }
-  @include mediaQuery(480px) {
+  @include media(480px) {
     gap: 2rem;
   }
 
@@ -72,7 +36,7 @@ $b2: #c778dd;
 
     text-transform: uppercase;
 
-    @include mediaQuery(480px) {
+    @include media(480px) {
       width: 100%;
     }
 
@@ -87,16 +51,17 @@ $b2: #c778dd;
 
       transition: color, box-shadow, 0.3s linear;
     }
-  }
-  &__anchor:hover {
-    border: 2px solid $b2;
-    color: $white;
-    background: rgba(199, 120, 221, 0.2);
 
-    /* Blur_Shadow */
-    box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+    &:hover {
+      border: 2px solid $b2;
+      color: $white;
+      background: rgba(199, 120, 221, 0.2);
 
-    transition: color, box-shadow, 0.3s linear;
+      /* Blur_Shadow */
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+      transition: color, box-shadow, 0.3s linear;
+    }
   }
 
   // Gradient image
@@ -111,32 +76,32 @@ $b2: #c778dd;
 
   // My image and the text container
   &__imagetext {
-    @include flexConfig(row, flex-start);
+    @include flex(row, flex-start);
 
     width: 100%;
     gap: 2rem;
 
-    @include mediaQuery(1024px) {
-      @include flexConfig(column, center, center);
+    @include media(1024px) {
+      @include flex(column, center, center);
     }
 
-    @include mediaQuery(480px) {
-      @include flexConfig(column, center, flex-start);
+    @include media(480px) {
+      @include flex(column, center, flex-start);
     }
   }
 
   // Short about me container
   &__shortabout {
-    @include fontConfig(1.2rem, 400, none);
-    @include mediaQuery(1024px) {
+    @include font(1.2rem, 400, none);
+    @include media(1024px) {
       text-align: center;
     }
   }
 
   // Iam Oscar... and #ui/front container
   &__titles {
-    @include flexConfig(column, center, flex-start);
-    @include fontConfig(4rem, 600);
+    @include flex(column, center, flex-start);
+    @include font(4rem, 600, inherit);
   }
 
   &__svg {
@@ -144,7 +109,7 @@ $b2: #c778dd;
     right: 1rem;
     bottom: 2%;
 
-    @include mediaQuery(660px) {
+    @include media(660px) {
       display: none;
     }
   }
@@ -153,24 +118,25 @@ $b2: #c778dd;
 .titles {
   // Iam Oscar Diaz
   &__title {
+    @include font(4rem, 600, uppercase);
     margin-bottom: -2rem;
-    @include mediaQuery(1024px) {
-      @include fontConfig(2rem, 600);
+    @include media(1024px) {
+      @include font(2rem, 600, uppercase);
       margin-bottom: 0;
     }
   }
 
   // #front/ui container
   &__subtitle {
-    @include fontConfig(5rem, 600);
+    @include font(5rem, 600, inherit);
     display: flex;
     color: $b2;
 
-    @include mediaQuery(1024px) {
-      @include fontConfig(2rem, 600);
+    @include media(1024px) {
+      @include font(2rem, 600, inherit);
     }
-    @include mediaQuery(480px) {
-      @include fontConfig(1.7rem, 600);
+    @include media(480px) {
+      @include font(1.7rem, 600, inherit);
     }
   }
 }
@@ -180,7 +146,7 @@ $b2: #c778dd;
   &__picture {
     width: 10.9375rem;
     height: 10.9375rem;
-    @include mediaQuery(480px) {
+    @include media(480px) {
       margin: 0 auto;
     }
   }
@@ -196,7 +162,7 @@ $b2: #c778dd;
   &__paragraph {
     hyphens: balanced;
     white-space: pre-line;
-    @include mediaQuery(480px) {
+    @include media(480px) {
       text-align: left;
       font-size: 1rem;
     }
@@ -206,14 +172,14 @@ $b2: #c778dd;
 // Words container
 .subtitle {
   &__subtitles {
-    @include fontConfig(5rem, 600);
+    @include font(5rem, 600, inherit);
     position: relative;
     white-space: nowrap;
-    @include mediaQuery(1024px) {
-      @include fontConfig(2rem, 600);
+    @include media(1024px) {
+      @include font(2rem, 600, inherit);
     }
-    @include mediaQuery(480px) {
-      @include fontConfig(1.7rem, 600);
+    @include media(480px) {
+      @include font(1.7rem, 600, inherit);
     }
   }
 }

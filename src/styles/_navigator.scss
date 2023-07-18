@@ -1,42 +1,13 @@
+// Mixins
+@import 'mixins';
+
+// Vars
 $white: #fff;
 $b1: #282c33;
 $b2: #c778dd;
 $padding: 2rem;
 
-// Mixins
-@mixin fontConfig {
-  font-family: Poppins;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-transform: uppercase;
-}
-
-@mixin flexConfig($dir: row, $jcont: space-around) {
-  display: flex;
-  flex-direction: $dir;
-  justify-content: $jcont;
-}
-
-@mixin mediaQuery($maxWidth: 920px) {
-  @media (max-width: $maxWidth) {
-    @content;
-  }
-}
-
-@mixin container($padding: 32px 0) {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: $padding;
-  @include mediaQuery(760px) {
-    padding: 1rem;
-  }
-}
-
 // Styles
-
 .anchor {
   &__hash {
     color: $b1;
@@ -88,29 +59,30 @@ $padding: 2rem;
 }
 
 .navigator {
-  @include flexConfig(row, space-between);
+  // @include flexConfig(row, space-between);
+  @include flex(row, space-between);
 
-  @include fontConfig();
+  @include font(1.2rem, normal, uppercase);
 
-  @include container();
+  @include container(32px 0);
 
   //   UL list
   &__list {
-    @include flexConfig(row, center);
+    @include flex(row, center);
     gap: 3rem;
 
-    @include mediaQuery(920px) {
+    @include media(920px) {
       // Gap between navigator elements
       gap: 0.5rem;
     }
-    @include mediaQuery(760px) {
+    @include media(760px) {
       display: none;
     }
   }
 
   //   Lang select
   &__select {
-    @include flexConfig(row, space-between);
+    @include flex(row, space-between);
     gap: 1rem;
     cursor: pointer;
     color: $white;
