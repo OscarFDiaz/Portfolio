@@ -169,19 +169,6 @@ body {
   background-color: var(--b-1);
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: var(--padding-container);
-}
-@media (max-width: 760px) {
-  .container {
-    padding: 1rem;
-  }
-}
-
 .anchor__hash {
   color: #282c33;
 }
@@ -213,11 +200,20 @@ body {
   flex-direction: row;
   justify-content: space-between;
   font-family: Poppins;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+@media (max-width: 760px) {
+  .navigator {
+    padding: 1rem;
+  }
 }
 .navigator__list {
   display: flex;

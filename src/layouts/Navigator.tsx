@@ -4,7 +4,7 @@ import { NavigatorSelect } from '../components/NavigatorSelect';
 
 export const Navigator = () => {
   return (
-    <nav className="navigator container">
+    <nav className="navigator">
       <NavigatorName />
       <NavigatorList />
       <NavigatorSelect />

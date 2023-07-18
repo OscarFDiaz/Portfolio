@@ -181,14 +181,3 @@ body {
     @content;
   }
 }
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: var(--padding-container);
-  @include mediaQuery(760px) {
-    padding: 1rem;
-  }
-}

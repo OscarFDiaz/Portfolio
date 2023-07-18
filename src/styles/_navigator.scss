@@ -1,11 +1,12 @@
 $white: #fff;
 $b1: #282c33;
 $b2: #c778dd;
+$padding: 2rem;
 
 // Mixins
 @mixin fontConfig {
   font-family: Poppins;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -21,6 +22,16 @@ $b2: #c778dd;
 @mixin mediaQuery($maxWidth: 920px) {
   @media (max-width: $maxWidth) {
     @content;
+  }
+}
+
+@mixin container($padding: 32px 0) {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $padding;
+  @include mediaQuery(760px) {
+    padding: 1rem;
   }
 }
 
@@ -80,6 +91,8 @@ $b2: #c778dd;
   @include flexConfig(row, space-between);
 
   @include fontConfig();
+
+  @include container();
 
   //   UL list
   &__list {
