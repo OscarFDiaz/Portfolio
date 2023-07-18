@@ -1,6 +1,5 @@
 import { ScrollDown } from './assets/icons/ScrollDown';
-import { Navigator } from './layouts/Navigator';
-import { SectionMain } from './layouts/SectionMain';
+import { Navigator, SectionAbout, SectionMain } from './layouts';
 
 export const Portfolio = () => {
   return (
@@ -10,6 +9,7 @@ export const Portfolio = () => {
       </header>
       <main>
         <SectionMain />
+        <SectionAbout />
         <ScrollDown className={'section__svg'} />
       </main>
     </>
