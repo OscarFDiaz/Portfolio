@@ -99,11 +99,8 @@ $padding: 2rem;
     @include flexConfig(row, center);
     gap: 3rem;
 
-    @include mediaQuery() {
-      gap: 1rem;
-    }
-    @include mediaQuery(810px) {
-      gap: 0;
+    @include mediaQuery(920px) {
+      gap: 0.5rem;
     }
     @include mediaQuery(760px) {
       display: none;
