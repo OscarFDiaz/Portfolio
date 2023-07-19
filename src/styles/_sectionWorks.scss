@@ -1,0 +1,195 @@
+// Mixins
+@import 'mixins';
+
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+$b3: #abb2bf;
+
+.empty {
+  &__title {
+    @include font(2rem, 500, uppercase);
+  }
+}
+.tag {
+  &__span {
+    color: $b2;
+  }
+  &__title {
+    color: $b3;
+  }
+}
+.work {
+  &__paragraph {
+    @include font(1.3rem, 400, normal);
+    min-height: 6rem;
+  }
+  &__picture {
+    overflow: hidden;
+    max-height: 12.5rem;
+    height: 12.5rem;
+  }
+  &__image {
+    filter: grayscale(1);
+  }
+  &__tags {
+    @include flex(row, space-between, flex-start, space-between);
+    @include font(1.25rem, 500, uppercase);
+    width: 100%;
+  }
+  &__title {
+    @include font(2rem, 500, normal);
+  }
+  &__buttons {
+    @include flex(row, space-between);
+    gap: 1rem;
+    width: 100%;
+  }
+  &__info {
+    @include flex(column, flex-start, flex-start, flex-start);
+    min-height: 3rem;
+  }
+
+  &__data {
+    @include flex(column, flex-start, flex-start, flex-start);
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+.works {
+  // Works container
+  @include container;
+
+  &__container {
+    // Work card
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  &__empty {
+    @include flex(row, center, center, center);
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+    outline: 1px solid $b2;
+    border: 1px solid $b2;
+    outline-offset: -1px;
+
+    &:hover {
+      outline: 2px solid $b2;
+      outline-width: 2px;
+      outline-offset: -2px;
+
+      color: white;
+
+      background: rgba(199, 120, 221, 0.05);
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+      transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
+    }
+  }
+  &__span {
+    color: $b2;
+  }
+  &__subtitle {
+    @include font(1.25rem, 600, uppercase);
+    color: $b3;
+  }
+
+  &__spansubtitle {
+    color: $b2;
+  }
+  &__h2 {
+    @include font(4rem, 600, uppercase);
+    color: $white;
+  }
+  &__work {
+    outline: 1px solid $b2;
+    border: 1px solid $b2;
+    outline-offset: -1px;
+
+    &:hover {
+      outline: 2px solid $b2;
+      outline-width: 2px;
+      outline-offset: -2px;
+
+      background: rgba(199, 120, 221, 0.05);
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+      transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
+
+      .work__image {
+        filter: grayscale(0);
+        transform: translateY(-5rem) scale(1.01);
+        overflow: hidden;
+        transition: grayscale, transform, 0.3s linear;
+      }
+
+      .work__title {
+        color: $white;
+        transition: color 0.3s linear;
+      }
+
+      .tag__title {
+        color: $white;
+        transition: color 0.3s linear;
+      }
+    }
+
+    @include hoverNone {
+      outline: 1px solid $b2;
+      outline-width: 2px;
+      outline-offset: -2px;
+
+      background: rgba(199, 120, 221, 0.05);
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+      .work__image {
+        filter: grayscale(0);
+        transform: translateY(-5rem) scale(1.01);
+        overflow: hidden;
+      }
+
+      .work__title {
+        color: $white;
+      }
+
+      .tag__title {
+        color: $white;
+      }
+    }
+  }
+}
+.button {
+  &__anchor {
+    @include flex(row, center);
+    @include font(1.25rem, 500, uppercase);
+    gap: 1rem;
+    outline: 1px solid $b2;
+    outline-offset: -1px;
+    padding: 1rem;
+    flex: 1;
+
+    &:hover {
+      color: $white;
+      outline: 1px solid $b2;
+      outline-width: 2px;
+      outline-offset: -2px;
+      background: rgba(199, 120, 221, 0.2);
+
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+
+      transition: box-shadow, color, 0.3s linear;
+    }
+
+    @include hoverNone {
+      color: $white;
+      outline: 1px solid $b2;
+      outline-width: 2px;
+      outline-offset: -2px;
+      background: rgba(199, 120, 221, 0.2);
+
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+    }
+  }
+}
