@@ -696,6 +696,12 @@ body {
   line-height: normal;
   text-transform: uppercase;
 }
+@media (max-width: 750px) {
+  .empty__title {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
 
 .tag__span {
   color: #c778dd;
@@ -717,6 +723,11 @@ body {
   overflow: hidden;
   max-height: 12.5rem;
   height: 12.5rem;
+}
+.work__picture--design {
+  overflow: hidden;
+  max-height: 18rem;
+  height: 18rem;
 }
 .work__image {
   filter: grayscale(1);
@@ -775,6 +786,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 0;
+  overflow: hidden;
 }
 @media (max-width: 760px) {
   .works {
@@ -783,7 +795,7 @@ body {
 }
 .works__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 .works__empty {
@@ -797,16 +809,26 @@ body {
   gap: 1rem;
   outline: 1px solid #c778dd;
   border: 1px solid #c778dd;
-  outline-offset: -1px;
+  outline-offset: -2px;
 }
 .works__empty:hover {
   outline: 2px solid #c778dd;
   outline-width: 2px;
-  outline-offset: -2px;
+  outline-offset: 1px;
   color: white;
   background: rgba(199, 120, 221, 0.05);
   box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
   transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
+}
+@media (hover: none) {
+  .works__empty {
+    outline: 2px solid #c778dd;
+    outline-width: 2px;
+    outline-offset: -2px;
+    color: white;
+    background: rgba(199, 120, 221, 0.05);
+    box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+  }
 }
 .works__span {
   color: #c778dd;
@@ -819,6 +841,7 @@ body {
   line-height: normal;
   text-transform: uppercase;
   color: #abb2bf;
+  padding: 3rem 0 2rem;
 }
 .works__spansubtitle {
   color: #c778dd;
@@ -835,19 +858,25 @@ body {
 .works__work {
   outline: 1px solid #c778dd;
   border: 1px solid #c778dd;
-  outline-offset: -1px;
+  outline-offset: -2px;
 }
 .works__work:hover {
   outline: 2px solid #c778dd;
   outline-width: 2px;
-  outline-offset: -2px;
+  outline-offset: 1px;
   background: rgba(199, 120, 221, 0.05);
   box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
   transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
 }
 .works__work:hover .work__image {
   filter: grayscale(0);
-  transform: translateY(-5rem) scale(1.01);
+  transform: translateY(-0.3rem) scale(1.01);
+  overflow: hidden;
+  transition: grayscale, transform, 0.3s linear;
+}
+.works__work:hover .work__image--design {
+  filter: grayscale(0);
+  transform: translateY(-0.2rem) scale(1.01);
   overflow: hidden;
   transition: grayscale, transform, 0.3s linear;
 }
@@ -869,7 +898,6 @@ body {
   }
   .works__work .work__image {
     filter: grayscale(0);
-    transform: translateY(-5rem) scale(1.01);
     overflow: hidden;
   }
   .works__work .work__title {

@@ -9,6 +9,11 @@ $b3: #abb2bf;
 .empty {
   &__title {
     @include font(2rem, 500, uppercase);
+
+    @include media(750px) {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
   }
 }
 .tag {
@@ -28,10 +33,17 @@ $b3: #abb2bf;
     overflow: hidden;
     max-height: 12.5rem;
     height: 12.5rem;
+
+    &--design {
+      overflow: hidden;
+      max-height: 18rem;
+      height: 18rem;
+    }
   }
   &__image {
     filter: grayscale(1);
   }
+
   &__tags {
     @include flex(row, space-between, flex-start, space-between);
     @include font(1.25rem, 500, uppercase);
@@ -59,11 +71,12 @@ $b3: #abb2bf;
 .works {
   // Works container
   @include container;
+  overflow: hidden;
 
   &__container {
     // Work card
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
   &__empty {
@@ -73,12 +86,12 @@ $b3: #abb2bf;
     gap: 1rem;
     outline: 1px solid $b2;
     border: 1px solid $b2;
-    outline-offset: -1px;
+    outline-offset: -2px;
 
     &:hover {
       outline: 2px solid $b2;
       outline-width: 2px;
-      outline-offset: -2px;
+      outline-offset: 1px;
 
       color: white;
 
@@ -87,6 +100,17 @@ $b3: #abb2bf;
 
       transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
     }
+
+    @include hoverNone {
+      outline: 2px solid $b2;
+      outline-width: 2px;
+      outline-offset: -2px;
+
+      color: white;
+
+      background: rgba(199, 120, 221, 0.05);
+      box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
+    }
   }
   &__span {
     color: $b2;
@@ -94,6 +118,7 @@ $b3: #abb2bf;
   &__subtitle {
     @include font(1.25rem, 600, uppercase);
     color: $b3;
+    padding: 3rem 0 2rem;
   }
 
   &__spansubtitle {
@@ -106,12 +131,12 @@ $b3: #abb2bf;
   &__work {
     outline: 1px solid $b2;
     border: 1px solid $b2;
-    outline-offset: -1px;
+    outline-offset: -2px;
 
     &:hover {
       outline: 2px solid $b2;
       outline-width: 2px;
-      outline-offset: -2px;
+      outline-offset: 1px;
 
       background: rgba(199, 120, 221, 0.05);
       box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
@@ -120,7 +145,14 @@ $b3: #abb2bf;
 
       .work__image {
         filter: grayscale(0);
-        transform: translateY(-5rem) scale(1.01);
+        transform: translateY(-0.3rem) scale(1.01);
+        overflow: hidden;
+        transition: grayscale, transform, 0.3s linear;
+      }
+
+      .work__image--design {
+        filter: grayscale(0);
+        transform: translateY(-0.2rem) scale(1.01);
         overflow: hidden;
         transition: grayscale, transform, 0.3s linear;
       }
@@ -146,7 +178,6 @@ $b3: #abb2bf;
 
       .work__image {
         filter: grayscale(0);
-        transform: translateY(-5rem) scale(1.01);
         overflow: hidden;
       }
 
