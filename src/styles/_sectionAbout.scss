@@ -43,10 +43,16 @@ $b3: #abb2bf;
     @include flex(row);
     gap: 1rem;
   }
+
+  //   Icon
   &__svg {
-    fill: none;
-    width: 2.8125rem;
-    height: 2.8125rem;
+    // fill: none;
+    // width: 2.8125rem;
+    // height: 2.8125rem;
+    position: relative;
+
+    // &:hover {
+    // }
 
     &:hover path {
       fill: $b1;
@@ -58,6 +64,33 @@ $b3: #abb2bf;
       stroke: $b2;
       transition: stroke, fill, box-shadow, 0.3s linear;
     }
+
+    // Tooltip on hover
+    &:hover .icons__span {
+      display: inline-flex;
+    }
+  }
+  &__span {
+    @include flex(row, center, center);
+    background-color: $b1;
+    border: 1px solid $b2;
+    color: $white;
+    height: 3rem;
+    display: none;
+    padding: 1rem;
+    white-space: nowrap;
+
+    /* Position the tooltip text*/
+    position: absolute;
+    top: -4rem;
+    z-index: 1;
+  }
+
+  &__icon {
+    position: relative;
+    fill: none;
+    width: 2.8125rem;
+    height: 2.8125rem;
   }
 }
 .stack {

@@ -617,9 +617,7 @@ body {
   gap: 1rem;
 }
 .icons__svg {
-  fill: none;
-  width: 2.8125rem;
-  height: 2.8125rem;
+  position: relative;
 }
 .icons__svg:hover path {
   fill: #282c33;
@@ -630,6 +628,33 @@ body {
   fill: #c778dd;
   stroke: #c778dd;
   transition: stroke, fill, box-shadow, 0.3s linear;
+}
+.icons__svg:hover .icons__span {
+  display: inline-flex;
+}
+.icons__span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #282c33;
+  border: 1px solid #c778dd;
+  color: #fff;
+  height: 3rem;
+  display: none;
+  padding: 1rem;
+  white-space: nowrap;
+  /* Position the tooltip text*/
+  position: absolute;
+  top: -4rem;
+  z-index: 1;
+}
+.icons__icon {
+  position: relative;
+  fill: none;
+  width: 2.8125rem;
+  height: 2.8125rem;
 }
 
 .stack__container {
@@ -707,7 +732,7 @@ body {
   padding: 1rem;
   width: auto;
   white-space: nowrap;
-  /* Position the tooltip text - see examples below! */
+  /* Position the tooltip text*/
   position: absolute;
   top: -4rem;
   z-index: 1;
