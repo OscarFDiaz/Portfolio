@@ -584,9 +584,12 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   align-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .about__paragraph {
   white-space: pre-line;
+  hyphens: balanced;
 }
 .about__span {
   color: #c778dd;

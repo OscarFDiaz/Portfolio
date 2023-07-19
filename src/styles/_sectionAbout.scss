@@ -23,9 +23,12 @@ $b3: #abb2bf;
   }
   &__icons {
     @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 1rem;
   }
   &__paragraph {
     white-space: pre-line;
+    hyphens: balanced;
   }
   &__span {
     color: $b2;
