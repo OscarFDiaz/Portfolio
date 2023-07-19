@@ -31,17 +31,19 @@ $b3: #abb2bf;
   }
   &__picture {
     overflow: hidden;
-    max-height: 12.5rem;
     height: 12.5rem;
 
     &--design {
-      overflow: hidden;
-      max-height: 18rem;
       height: 18rem;
     }
   }
   &__image {
+    height: 100%;
     filter: grayscale(1);
+
+    &--desing {
+      // filter: grayscale(1);
+    }
   }
 
   &__tags {
@@ -71,7 +73,6 @@ $b3: #abb2bf;
 .works {
   // Works container
   @include container;
-  overflow: hidden;
 
   &__container {
     // Work card
@@ -84,29 +85,21 @@ $b3: #abb2bf;
     height: 100%;
     width: 100%;
     gap: 1rem;
-    outline: 1px solid $b2;
-    border: 1px solid $b2;
-    outline-offset: -2px;
+    border: 2px solid $b3;
 
     &:hover {
-      outline: 2px solid $b2;
-      outline-width: 2px;
-      outline-offset: 1px;
-
       color: white;
+      border-color: $b2;
 
       background: rgba(199, 120, 221, 0.05);
       box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
 
-      transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
+      transition: box-shadow 200ms ease;
     }
 
     @include hoverNone {
-      outline: 2px solid $b2;
-      outline-width: 2px;
-      outline-offset: -2px;
-
       color: white;
+      border-color: $b2;
 
       background: rgba(199, 120, 221, 0.05);
       box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
@@ -115,44 +108,25 @@ $b3: #abb2bf;
   &__span {
     color: $b2;
   }
-  &__subtitle {
-    @include font(1.25rem, 600, uppercase);
-    color: $b3;
-    padding: 3rem 0 2rem;
-  }
-
-  &__spansubtitle {
-    color: $b2;
-  }
   &__h2 {
     @include font(4rem, 600, uppercase);
     color: $white;
   }
   &__work {
-    outline: 1px solid $b2;
-    border: 1px solid $b2;
-    outline-offset: -2px;
+    border: 2px solid $b3;
+    overflow: hidden;
 
     &:hover {
-      outline: 2px solid $b2;
-      outline-width: 2px;
-      outline-offset: 1px;
+      border-color: $b2;
 
       background: rgba(199, 120, 221, 0.05);
       box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
 
-      transition: outline-width 0.2s ease, outline-offset 0.5s ease, box-shadow 200ms ease;
+      transition: box-shadow 200ms ease;
 
       .work__image {
         filter: grayscale(0);
-        transform: translateY(-0.3rem) scale(1.01);
-        overflow: hidden;
-        transition: grayscale, transform, 0.3s linear;
-      }
-
-      .work__image--design {
-        filter: grayscale(0);
-        transform: translateY(-0.2rem) scale(1.01);
+        transform: scale(1.03);
         overflow: hidden;
         transition: grayscale, transform, 0.3s linear;
       }
@@ -169,10 +143,7 @@ $b3: #abb2bf;
     }
 
     @include hoverNone {
-      outline: 1px solid $b2;
-      outline-width: 2px;
-      outline-offset: -2px;
-
+      border-color: $b2;
       background: rgba(199, 120, 221, 0.05);
       box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
 
@@ -196,7 +167,7 @@ $b3: #abb2bf;
     @include flex(row, center);
     @include font(1.25rem, 500, uppercase);
     gap: 1rem;
-    outline: 1px solid $b2;
+    outline: 1px solid $b3;
     outline-offset: -1px;
     padding: 1rem;
     flex: 1;

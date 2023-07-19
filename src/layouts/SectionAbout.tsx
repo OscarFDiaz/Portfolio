@@ -1,9 +1,9 @@
-import { AboutParagraph, AboutStack, AboutTitle } from '../components/About';
+import { AboutParagraph, AboutStack, SectionTitle } from '../components/About';
 
 export const SectionAbout = () => {
   return (
     <section className="about" id="about">
-      <AboutTitle />
+      <SectionTitle title="About" />
       <AboutParagraph />
       <AboutStack />
     </section>

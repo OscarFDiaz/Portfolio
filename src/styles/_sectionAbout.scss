@@ -17,10 +17,6 @@ $b3: #abb2bf;
     font-size: 600;
     color: $white;
   }
-  &__h2 {
-    @include font(4rem, 600, uppercase);
-    color: $white;
-  }
   &__icons {
     @include flex(row, space-between, flex-start);
     flex-wrap: wrap;
@@ -29,9 +25,6 @@ $b3: #abb2bf;
   &__paragraph {
     white-space: pre-line;
     hyphens: balanced;
-  }
-  &__span {
-    color: $b2;
   }
 }
 .icons {
@@ -105,11 +98,5 @@ $b3: #abb2bf;
 .stack {
   &__container {
     padding-top: 2rem;
-  }
-  &__h2 {
-    @include font(1.25rem, 600, uppercase);
-  }
-  &__span {
-    color: $b2;
   }
 }

@@ -45,7 +45,7 @@ export const worksItems: Props[] = [
       src: 'https://i.imgur.com/oMrZDLF.png',
       alt: 'Imagen de la aplicación',
     },
-    tags: ['MERN', 'JS', 'AXIOS', 'ROUTER-DOM'],
+    tags: ['MERN', 'JS', 'AXIOS', 'ROUTERDOM'],
     anchor_live: {
       href: 'https://oscarfdiaz.github.io/mern-calendar/',
       title: 'Link a prueba online',
@@ -83,11 +83,11 @@ export const worksItems: Props[] = [
     },
     tags: ['BOOTSTRAP', 'ROUTERDOM', 'REACT'],
     anchor_live: {
-      href: 'https://www.behance.net/oscarofda',
+      href: 'https://oscarfdiaz.github.io/react-heroes-app/',
       title: 'Link a prueba online',
     },
     anchor_github: {
-      href: 'https://www.behance.net/oscarofda',
+      href: 'https://github.com/OscarFDiaz/react-heroes-app',
       title: 'Link a github del proyecto',
     },
   },

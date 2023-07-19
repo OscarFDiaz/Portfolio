@@ -1,0 +1,25 @@
+@import 'mixins';
+
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+$b3: #abb2bf;
+
+.sectiontitle {
+  &__h2 {
+    @include font(4rem, 600, uppercase);
+    color: $white;
+  }
+  &__span {
+    color: $b2;
+  }
+}
+.sectionsubtitle {
+  &__h2 {
+    @include font(1.25rem, 600, uppercase);
+    color: $b3;
+  }
+  &__span {
+    color: $b2;
+  }
+}

@@ -1,3 +1,3 @@
 export * from './AboutParagraph';
 export * from './AboutStack';
-export * from './AboutTitle';
+export * from '../SectionTitle';

@@ -1,59 +1,35 @@
 import { ArrowExternal } from '../assets/icons/ArrowExternal';
-import { BehanceSmall } from '../assets/icons/BehanceSmall';
-import { designsItems } from '../helpers/json/designsItems';
-import { GithubSmall } from '../assets/icons/GithubSmall';
-import { worksItems } from '../helpers/json/worksItems';
+import { designsItems, worksItems } from '../helpers/json/';
+import { SectionTitle, SectionSubtitle } from '../components/';
+import { WorkInfo, WorkTags, WorkButton, WorkPicture } from '../components/Works/';
+
+enum buttonType {
+  Behance = 'Behance',
+  More = 'View More',
+  Github = 'Github',
+  Live = 'Live',
+}
+
 export const SectionWorks = () => {
   const widthOutput = window.screen.width;
 
   return (
     <section className="works" id="works">
-      <h2 className="works__h2">
-        <span className="works__span">#</span>Works
-      </h2>
-
-      <h3 className="works__subtitle">
-        <span className="works__spansubtitle">#</span>Front-end, developer
-      </h3>
+      <SectionTitle title="Works" />
+      <SectionSubtitle title="Front-end, developer" style={{ padding: '3rem 0 2rem' }} />
       <div className="works__container">
         {/* Only show 2 items if the user joins as mobile user */}
         {widthOutput > 768
           ? worksItems.map((work) => {
               return (
                 <div className="works__work">
-                  <picture className="work__picture">
-                    <img className="work__image" {...work.img} loading="lazy" />
-                  </picture>
+                  <WorkPicture work={work.img} />
                   <div className="work__data">
-                    <div className="work__info">
-                      <h4 className="work__title">{work.name}</h4>
-                      <p className="work__paragraph">{work.description}</p>
-                    </div>
-                    <div className="work__tags">
-                      {work.tags.map((tag) => (
-                        <h5 className="tag__title">
-                          <span className="tag__span">#</span>
-                          {tag}
-                        </h5>
-                      ))}
-                    </div>
+                    <WorkInfo name={work.name} description={work.description} />
+                    <WorkTags work={work} />
                     <div className="work__buttons">
-                      <a
-                        {...work.anchor_live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="button__anchor"
-                      >
-                        Live <ArrowExternal />
-                      </a>
-                      <a
-                        {...work.anchor_github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="button__anchor"
-                      >
-                        Github <GithubSmall />
-                      </a>
+                      <WorkButton work={work.anchor_live} button={buttonType.Live} />
+                      <WorkButton work={work.anchor_github} button={buttonType.Github} />
                     </div>
                   </div>
                 </div>
@@ -62,45 +38,20 @@ export const SectionWorks = () => {
           : worksItems.slice(0, 2).map((work) => {
               return (
                 <div className="works__work">
-                  <picture className="work__picture">
-                    <img className="work__image" {...work.img} loading="lazy" />
-                  </picture>
+                  <WorkPicture work={work.img} />
                   <div className="work__data">
-                    <div className="work__info">
-                      <h4 className="work__title">{work.name}</h4>
-                      <p className="work__paragraph">{work.description}</p>
-                    </div>
-                    <div className="work__tags">
-                      {work.tags.map((tag) => (
-                        <h5 className="tag__title">
-                          <span className="tag__span">#</span>
-                          {tag}
-                        </h5>
-                      ))}
-                    </div>
+                    <WorkInfo name={work.name} description={work.description} />
+                    <WorkTags work={work} />
                     <div className="work__buttons">
-                      <a
-                        {...work.anchor_live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="button__anchor"
-                      >
-                        Live <ArrowExternal />
-                      </a>
-                      <a
-                        {...work.anchor_github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="button__anchor"
-                      >
-                        Github <GithubSmall />
-                      </a>
+                      <WorkButton work={work.anchor_live} button={buttonType.Live} />
+                      <WorkButton work={work.anchor_github} button={buttonType.Github} />
                     </div>
                   </div>
                 </div>
               );
             })}
 
+        {/* SEE ALL button */}
         <a
           className="works__empty"
           href="https://github.com/OscarFDiaz"
@@ -114,71 +65,43 @@ export const SectionWorks = () => {
       </div>
 
       {/* DESIGNS */}
-      <h3 className="works__subtitle">
-        <span className="works__spansubtitle">#</span>Designs, UI Designer
-      </h3>
+      <SectionSubtitle title="Designs, UI Designer" style={{ padding: '3rem 0 2rem' }} />
       <div className="works__container">
         {widthOutput > 768
           ? designsItems.map((design) => (
               <div className="works__work">
-                <picture className="work__picture--design">
-                  <img className="work__image--design" {...design.img} loading="lazy" />
-                </picture>
+                <WorkPicture
+                  work={design.img}
+                  className="work__picture--design"
+                  imgClass="work__image--design"
+                />
                 <div className="work__data">
-                  <div className="work__info">
-                    <h4 className="work__title">{design.name}</h4>
-                  </div>
-                  <div className="work__tags">
-                    {design.tags.map((tag) => (
-                      <h5 className="tag__title">
-                        <span className="tag__span">#</span>
-                        {tag}
-                      </h5>
-                    ))}
-                  </div>
+                  <WorkInfo name={design.name} />
+                  <WorkTags work={design} />
                   <div className="work__buttons">
-                    <a
-                      {...design.anchor_behance}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button__anchor"
-                    >
-                      View More <BehanceSmall />
-                    </a>
+                    <WorkButton work={design.anchor_behance} button={buttonType.More} />
                   </div>
                 </div>
               </div>
             ))
           : designsItems.slice(0, 2).map((design) => (
               <div className="works__work">
-                <picture className="work__picture--design">
-                  <img className="work__image--design" {...design.img} loading="lazy" />
-                </picture>
+                <WorkPicture
+                  work={design.img}
+                  className="work__picture--design"
+                  imgClass="work__image--design"
+                />
                 <div className="work__data">
-                  <div className="work__info">
-                    <h4 className="work__title">{design.name}</h4>
-                  </div>
-                  <div className="work__tags">
-                    {design.tags.map((tag) => (
-                      <h5 className="tag__title">
-                        <span className="tag__span">#</span>
-                        {tag}
-                      </h5>
-                    ))}
-                  </div>
+                  <WorkInfo name={design.name} />
+                  <WorkTags work={design} />
                   <div className="work__buttons">
-                    <a
-                      {...design.anchor_behance}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="button__anchor"
-                    >
-                      View More <BehanceSmall />
-                    </a>
+                    <WorkButton work={design.anchor_behance} button={buttonType.More} />
                   </div>
                 </div>
               </div>
             ))}
+
+        {/* SEE ALL button */}
         <a
           className="works__empty"
           href="https://www.behance.net/oscarofda"
