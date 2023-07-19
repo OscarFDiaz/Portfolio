@@ -33,7 +33,7 @@ export const WorkButton = ({ work, button, className }: Props) => {
       ) : button === buttonType.Behance ? (
         <BehanceSmall />
       ) : (
-        <ArrowExternal />
+        <BehanceSmall />
       )}
     </a>
   );
