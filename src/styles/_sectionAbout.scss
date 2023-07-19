@@ -1,0 +1,73 @@
+// Mixins
+@import 'mixins';
+
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+$b3: #abb2bf;
+
+.about {
+  @include container;
+  &__anchor {
+    display: inline-flex;
+    font-weight: 600;
+    color: $b2;
+  }
+  &__b {
+    font-size: 600;
+    color: $white;
+  }
+  &__h2 {
+    @include font(4rem, 600, uppercase);
+    color: $white;
+  }
+  &__icons {
+    @include flex(row, space-between, flex-start);
+  }
+  &__paragraph {
+    white-space: pre-line;
+  }
+  &__span {
+    color: $b2;
+  }
+}
+.icons {
+  &__container {
+    @include flex(column, center, flex-start);
+  }
+  &__h3 {
+    @include font(1rem, 600, uppercase);
+    color: $b3;
+  }
+  &__web {
+    @include flex(row);
+    gap: 1rem;
+  }
+  &__svg {
+    fill: none;
+    width: 2.8125rem;
+    height: 2.8125rem;
+
+    &:hover path {
+      fill: $b1;
+      stroke: $b1;
+      transition: stroke, fill, box-shadow, 0.3s linear;
+    }
+    &:hover rect {
+      fill: $b2;
+      stroke: $b2;
+      transition: stroke, fill, box-shadow, 0.3s linear;
+    }
+  }
+}
+.stack {
+  &__container {
+    padding-top: 2rem;
+  }
+  &__h2 {
+    @include font(1.25rem, 600, uppercase);
+  }
+  &__span {
+    color: $b2;
+  }
+}

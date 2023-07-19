@@ -2,7 +2,7 @@ interface Props {
   className?: string;
 }
 
-export const Ts = ({ className }: Props) => {
+export const VisualCode = ({ className }: Props) => {
   return (
     <svg
       className={className}
