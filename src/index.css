@@ -635,6 +635,9 @@ body {
 .icons__svg:hover .icons__span {
   display: inline-flex;
 }
+.icons__svg--last .icons__span {
+  right: 0.05rem;
+}
 .icons__span {
   display: flex;
   flex-direction: row;

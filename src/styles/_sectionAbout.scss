@@ -49,13 +49,7 @@ $b3: #abb2bf;
 
   //   Icon
   &__svg {
-    // fill: none;
-    // width: 2.8125rem;
-    // height: 2.8125rem;
     position: relative;
-
-    // &:hover {
-    // }
 
     &:hover path {
       fill: $b1;
@@ -71,6 +65,10 @@ $b3: #abb2bf;
     // Tooltip on hover
     &:hover .icons__span {
       display: inline-flex;
+    }
+
+    &--last .icons__span {
+      right: 0.05rem;
     }
   }
   &__span {

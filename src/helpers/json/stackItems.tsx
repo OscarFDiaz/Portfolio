@@ -47,6 +47,9 @@ export const stackItems: Props[] = [
   {
     id: 5,
     name: 'Other',
-    icons: [<Git className="icons__svg" />, <VisualCode className="icons__svg" />],
+    icons: [
+      <Git className="icons__svg" />,
+      <VisualCode className="icons__svg icons__svg--last" />,
+    ],
   },
 ];
