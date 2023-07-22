@@ -214,6 +214,11 @@ body {
   color: #fff;
   transition: color 0.5s linear;
 }
+.item__anchor:hover .anchor__hash {
+  color: #c778dd;
+  font-weight: 600;
+  transition: color 0.5s linear;
+}
 
 .name__arrow {
   color: #c778dd;

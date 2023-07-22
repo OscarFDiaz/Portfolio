@@ -37,6 +37,12 @@ $padding: 2rem;
   &__anchor:hover {
     color: $white;
     transition: color 0.5s linear;
+
+    .anchor__hash {
+      color: $b2;
+      font-weight: 600;
+      transition: color 0.5s linear;
+    }
   }
 }
 
