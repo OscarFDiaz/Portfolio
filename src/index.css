@@ -493,6 +493,7 @@ body {
   gap: 2rem;
   border: 2px solid #c778dd;
   text-transform: uppercase;
+  font-weight: 500;
 }
 @media (max-width: 480px) {
   .home__anchor {
@@ -1074,6 +1075,72 @@ body {
   fill: #c778dd;
   stroke: #c778dd;
   transition: stroke, fill, box-shadow, 0.3s linear;
+}
+
+.footer {
+  background-color: #222223;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.footer__p {
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.footer__p--litle {
+  font-size: 1rem;
+}
+@media (hover: none) {
+  .footer__p--litle {
+    display: none;
+  }
+}
+.footer__span {
+  color: #c778dd;
+}
+
+.konami {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(40, 44, 51, 0.9);
+}
+.konami__p {
+  font-family: Poppins;
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  z-index: 2;
+}
+.konami__p--litle {
+  bottom: 5%;
+  font-size: 1rem;
+}
+.konami__span {
+  color: #c778dd;
+}
+.konami__span--litle {
+  font-size: 1rem;
+}
+.konami__matrix {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=index.css.map */

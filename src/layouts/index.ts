@@ -1,3 +1,4 @@
+export * from './Footer';
 export * from './Navigator';
 export * from './SectionAbout';
 export * from './SectionContact';

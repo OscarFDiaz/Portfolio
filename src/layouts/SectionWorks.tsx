@@ -72,8 +72,8 @@ export const SectionWorks = ({ className }: Props) => {
       <SectionSubtitle title="Designs, UI Designer" style={{ padding: '3rem 0 2rem' }} />
       <div className="works__container">
         {widthOutput > 768
-          ? designsItems.map((design) => (
-              <div className="works__work">
+          ? designsItems.map((design, i) => (
+              <div className="works__work" key={i}>
                 <WorkPicture
                   work={design.img}
                   className="work__picture--design"
@@ -88,8 +88,8 @@ export const SectionWorks = ({ className }: Props) => {
                 </div>
               </div>
             ))
-          : designsItems.slice(0, 2).map((design) => (
-              <div className="works__work">
+          : designsItems.slice(0, 2).map((design, i) => (
+              <div className="works__work" key={i}>
                 <WorkPicture
                   work={design.img}
                   className="work__picture--design"

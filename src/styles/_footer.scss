@@ -1,0 +1,28 @@
+// Mixins
+@import 'mixins';
+
+// Vars
+$white: #fff;
+$b1: #282c33;
+$b2: #c778dd;
+
+.footer {
+  background-color: #222223;
+  padding: 4rem;
+
+  @include flex(column, center, center, center);
+  &__p {
+    @include font(1.25rem, 500, uppercase);
+
+    &--litle {
+      font-size: 1rem;
+
+      @include hoverNone {
+        display: none;
+      }
+    }
+  }
+  &__span {
+    color: $b2;
+  }
+}

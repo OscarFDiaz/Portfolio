@@ -38,6 +38,7 @@ $b2: #c778dd;
 
     border: 2px solid $b2;
     text-transform: uppercase;
+    font-weight: 500;
 
     @include media(480px) {
       width: 100%;
