@@ -1,6 +1,10 @@
-export const Konami = () => {
+interface Props {
+  className: string;
+}
+
+export const Konami = ({ className }: Props) => {
   return (
-    <div className="konami">
+    <div className={`konami ${className}`} id="konami_container">
       <canvas
         width={'100%'}
         height={'500px'}

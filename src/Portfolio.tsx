@@ -1,6 +1,5 @@
 import { ScrollDown } from './assets/icons/ScrollDown';
 import { Konami } from './components/Konami/Konami';
-import { Matrix } from './components/Konami/Matrix';
 import {
   Navigator,
   SectionAbout,
@@ -20,15 +19,15 @@ export const Portfolio = () => {
       </header>
       <main>
         <SectionMain className="animate__animated animate__fadeInUp" />
-        <SectionAbout className="animate__animated animate__fadeInUp animate__delay-4s" />
-        <SectionWorks className="animate__animated animate__fadeInUp animate__delay-4s" />
-        <SectionContact className="animate__animated animate__fadeInUp animate__delay-4s" />
+        <SectionAbout className="animate__animated animate__fadeInUp animate__delay-3s" />
+        <SectionWorks className="animate__animated animate__fadeInUp animate__delay-3s" />
+        <SectionContact className="animate__animated animate__fadeInUp animate__delay-3s" />
       </main>
       <footer>
-        <Footer className="animate__animated animate__fadeInUp animate__delay-4s" />
+        <Footer className="animate__animated animate__fadeInUp animate__delay-3s" />
       </footer>
       <ScrollDown className={'home__svg'} />
-      <Konami />
+      <Konami className="animate__animated animate__pulse" />
     </>
   );
 };

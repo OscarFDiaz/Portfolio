@@ -1117,6 +1117,7 @@ body {
   height: 100vh;
   width: 100%;
   background: rgba(40, 44, 51, 0.9);
+  display: none;
 }
 .konami__p {
   font-family: Poppins;
