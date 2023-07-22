@@ -12,6 +12,7 @@ $white: #ffffff;
   width: 100%;
   background: rgba($color: $b1, $alpha: 0.9);
   display: none;
+
   &__p {
     @include font(10rem, 600, uppercase);
     color: $white;
@@ -31,7 +32,6 @@ $white: #ffffff;
   }
 
   &__matrix {
-    // display: ;
     overflow: hidden;
   }
 }

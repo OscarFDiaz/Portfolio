@@ -7,7 +7,7 @@ export const Konami = ({ className }: Props) => {
     <div className={`konami ${className}`} id="konami_container">
       <canvas
         width={'100%'}
-        height={'500px'}
+        height={'1000px'}
         id="matrixCanvas"
         className="konami__matrix"
       ></canvas>
