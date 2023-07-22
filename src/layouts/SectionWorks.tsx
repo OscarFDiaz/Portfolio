@@ -10,19 +10,23 @@ enum buttonType {
   Live = 'Live',
 }
 
-export const SectionWorks = () => {
+interface Props {
+  className: string;
+}
+
+export const SectionWorks = ({ className }: Props) => {
   const widthOutput = window.screen.width;
 
   return (
-    <section className="works" id="works">
+    <section className={`works ${className}`} id="works">
       <SectionTitle title="Works" />
       <SectionSubtitle title="Front-end, developer" style={{ padding: '3rem 0 2rem' }} />
       <div className="works__container">
         {/* Only show 2 items if the user joins as mobile user */}
         {widthOutput > 768
-          ? worksItems.map((work) => {
+          ? worksItems.map((work, i) => {
               return (
-                <div className="works__work">
+                <div className="works__work" key={i}>
                   <WorkPicture work={work.img} />
                   <div className="work__data">
                     <WorkInfo name={work.name} description={work.description} />
@@ -35,9 +39,9 @@ export const SectionWorks = () => {
                 </div>
               );
             })
-          : worksItems.slice(0, 2).map((work) => {
+          : worksItems.slice(0, 2).map((work, i) => {
               return (
-                <div className="works__work">
+                <div className="works__work" key={i}>
                   <WorkPicture work={work.img} />
                   <div className="work__data">
                     <WorkInfo name={work.name} description={work.description} />

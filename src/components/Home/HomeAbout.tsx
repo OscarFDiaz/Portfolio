@@ -1,7 +1,7 @@
 //TODO change each paragraph depending on the user select ES or En
 export const HomeAbout = () => {
   return (
-    <div className="section__shortabout">
+    <div className="home__shortabout">
       <p className="shortabout__paragraph">
         Graduated in <b className="paragraph__b">Computer Engineering</b> from the
         Universidad de Guadalajara CUCEI. &#10; &#10; Current focus as{' '}

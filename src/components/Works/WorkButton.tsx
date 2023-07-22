@@ -22,7 +22,7 @@ export const WorkButton = ({ work, button, className }: Props) => {
       target="_blank"
       rel="noopener noreferrer"
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-      className={`button__anchor ${className}`}
+      className={`button__anchor ${className ? className : ''}`}
     >
       {/* Title for the button and the icon */}
       {button}

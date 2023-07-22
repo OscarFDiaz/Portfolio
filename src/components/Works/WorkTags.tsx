@@ -7,7 +7,7 @@ interface Props {
 export const WorkTags = ({ work }: Props) => (
   <div className="work__tags">
     {work.tags.map((tag) => (
-      <h5 className="tag__title">
+      <h5 className="tag__title" key={tag}>
         <span className="tag__span">#</span>
         {tag}
       </h5>

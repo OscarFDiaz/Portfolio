@@ -2,15 +2,21 @@ import { HomeAbout, HomeGradient, HomeImgText } from '../components/Home';
 import { HomeButton } from '../components/Home/HomeButton';
 import { SocialIcons } from './SocialIcons';
 
-export const SectionMain = () => {
+interface Props {
+  className: string;
+}
+
+export const SectionMain = ({ className }: Props) => {
   return (
-    <section className="section">
-      <HomeGradient />
+    <section className={`home ${className}`}>
+      <HomeGradient
+        className={'animate__animated animate__fadeInRight animate__slower'}
+      />
       <HomeImgText />
       <HomeAbout />
-      <HomeButton />
+      <HomeButton className={'animate__animated animate__fadeInUp animate__delay-2s'} />
 
-      <SocialIcons />
+      <SocialIcons className={'animate__animated animate__fadeInUp animate__delay-3s'} />
     </section>
   );
 };

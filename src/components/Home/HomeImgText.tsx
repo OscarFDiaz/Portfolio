@@ -2,11 +2,11 @@ import Picture from '../../assets/picture.webp';
 
 export const HomeImgText = () => {
   return (
-    <div className="section__imagetext">
+    <div className="home__imagetext">
       <picture className="imagetext__picture">
         <img loading="lazy" src={Picture} alt="Portrait of Oscar Diaz " />
       </picture>
-      <div className="section__titles">
+      <div className="home__titles">
         <h1 className="titles__title">I am Oscar Diaz</h1>
         <div className="titles__subtitle">
           <p>#</p>

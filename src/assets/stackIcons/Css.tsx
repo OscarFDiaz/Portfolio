@@ -14,7 +14,7 @@ export const Css = ({ className }: Props) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_313_1278)">
+        <g clipPath="url(#clip0_313_1278)">
           <rect x="0.5" y="0.5" width="44" height="44" rx="0.5" stroke="#C778DD" />
           <path
             d="M13.6464 19.5058L13.968 23.2142H22V19.5058H13.6464ZM21.9999 12H13L13.3263 15.7084H21.9999V12ZM21.9999 32.9952V29.137L21.9842 29.1413L17.9869 28.0261L17.7314 25.0684H14.1284L14.6312 30.8912L21.9834 33L21.9999 32.9952Z"
