@@ -4,6 +4,7 @@
 $white: #fff;
 $b1: #282c33;
 $b2: #c778dd;
+$b3: #abb2bf;
 
 // Styles
 .home {
@@ -119,7 +120,32 @@ $b2: #c778dd;
   &__svg {
     position: fixed;
     right: 1rem;
-    bottom: 2%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    & path:nth-child(2),
+    > path {
+      fill: $b3;
+      transition: fill 0.3s linear;
+    }
+
+    &:hover {
+      & > path {
+        fill: $white;
+      }
+      & path:nth-child(2) {
+        fill: $b2;
+      }
+    }
+
+    @include hoverNone {
+      & > path {
+        fill: $white;
+      }
+      & path:nth-child(2) {
+        fill: $b2;
+      }
+    }
 
     @include media(660px) {
       display: none;

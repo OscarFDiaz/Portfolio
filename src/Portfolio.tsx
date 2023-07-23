@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { ScrollDown } from './assets/icons/ScrollDown';
+import { ScrollTop } from './assets/icons/ScrollTop';
 import { Konami } from './components/Konami/Konami';
 import {
   Navigator,
@@ -11,6 +13,16 @@ import {
 import 'animate.css';
 
 export const Portfolio = () => {
+  const [onBottom, setOnBottom] = useState<boolean>(false);
+
+  window.onscroll = function (ev) {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      setOnBottom(true);
+    } else {
+      setOnBottom(false);
+    }
+  };
+
   return (
     <>
       {/* <Matrix /> */}
@@ -26,7 +38,13 @@ export const Portfolio = () => {
       <footer>
         <Footer className="animate__animated animate__fadeInUp animate__delay-3s" />
       </footer>
-      <ScrollDown className={'home__svg'} />
+
+      {onBottom ? (
+        <ScrollTop className={'home__svg animate__animated animate__fadeInRight'} />
+      ) : (
+        <ScrollDown className={'home__svg animate__animated animate__fadeInRight'} />
+      )}
+
       <Konami className="animate__animated animate__pulse" />
     </>
   );

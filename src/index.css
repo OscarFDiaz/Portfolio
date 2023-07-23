@@ -593,7 +593,27 @@ body {
 .home__svg {
   position: fixed;
   right: 1rem;
-  bottom: 2%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+.home__svg path:nth-child(2),
+.home__svg > path {
+  fill: #abb2bf;
+  transition: fill 0.3s linear;
+}
+.home__svg:hover > path {
+  fill: #fff;
+}
+.home__svg:hover path:nth-child(2) {
+  fill: #c778dd;
+}
+@media (hover: none) {
+  .home__svg > path {
+    fill: #fff;
+  }
+  .home__svg path:nth-child(2) {
+    fill: #c778dd;
+  }
 }
 @media (max-width: 660px) {
   .home__svg {
