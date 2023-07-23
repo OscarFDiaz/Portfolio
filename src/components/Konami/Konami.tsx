@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 interface Props {
   className: string;
 }
 
 export const Konami = ({ className }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <div className={`konami ${className}`} id="konami_container">
       <canvas
@@ -15,7 +19,8 @@ export const Konami = ({ className }: Props) => {
         <span className="konami__span">#</span>Konami!
       </p>
       <p className="konami__p konami__p--litle">
-        <span className="konami__span konami__span--litle">#</span>Press any key to leave
+        <span className="konami__span konami__span--litle">#</span>
+        {t('anyKey')}
       </p>
     </div>
   );
