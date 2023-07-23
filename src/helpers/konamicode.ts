@@ -61,4 +61,7 @@ const disableScroll = () => {
 
 const enableScroll = () => {
   document.body.removeAttribute('style');
+
+  // To hide the overflow of the home gradient
+  document.body.style.overflowX = 'hidden';
 };

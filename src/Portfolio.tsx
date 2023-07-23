@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ScrollDown } from './assets/icons/ScrollDown';
 import { ScrollTop } from './assets/icons/ScrollTop';
 import { Konami } from './components/Konami/Konami';
@@ -15,7 +15,7 @@ import 'animate.css';
 export const Portfolio = () => {
   const [onBottom, setOnBottom] = useState<boolean>(false);
 
-  window.onscroll = function (ev) {
+  window.onscroll = function () {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
       setOnBottom(true);
     } else {
@@ -25,27 +25,26 @@ export const Portfolio = () => {
 
   return (
     <>
-      {/* <Matrix /> */}
       <header>
-        <Navigator className="animate__animated animate__fadeInDown" />
+        <Navigator className="{animate__animated animate__fadeInDown}" />
       </header>
       <main>
-        <SectionMain className="animate__animated animate__fadeInUp" />
-        <SectionAbout className="animate__animated animate__fadeInUp animate__delay-3s" />
-        <SectionWorks className="animate__animated animate__fadeInUp animate__delay-3s" />
-        <SectionContact className="animate__animated animate__fadeInUp animate__delay-3s" />
+        <SectionMain className="{animate__animated animate__fadeInUp}" />
+        <SectionAbout className="{animate__animated animate__fadeInUp animate__delay-3s}" />
+        <SectionWorks className="{animate__animated animate__fadeInUp animate__delay-3s}" />
+        <SectionContact className="{animate__animated animate__fadeInUp animate__delay-3s}" />
       </main>
       <footer>
-        <Footer className="animate__animated animate__fadeInUp animate__delay-3s" />
+        <Footer className="{animate__animated animate__fadeInUp animate__delay-3s}" />
       </footer>
+
+      <Konami className="{animate__animated animate__pulse}" />
 
       {onBottom ? (
         <ScrollTop className={'home__svg animate__animated animate__fadeInRight'} />
       ) : (
         <ScrollDown className={'home__svg animate__animated animate__fadeInRight'} />
       )}
-
-      <Konami className="animate__animated animate__pulse" />
     </>
   );
 };
