@@ -1,10 +1,12 @@
 import { ArrowExternal } from '../icons/ArrowExternal';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   className?: string;
 }
 
 export const Behance = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <a
       href="https://www.behance.net/oscarofda"
@@ -14,7 +16,7 @@ export const Behance = ({ className }: Props) => {
       className="social__anchor"
     >
       <span className="social__svgspan">
-        Link to my Behance
+        {t('toBehance')}
         <ArrowExternal />
       </span>
       <svg

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { EmailSend } from '../../assets/icons/EmailSend';
 
 interface Props {
@@ -5,6 +6,7 @@ interface Props {
 }
 
 export const ContactButton = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <a
       className={`contact__anchor ${className ? className : ''}`}
@@ -13,7 +15,7 @@ export const ContactButton = ({ className }: Props) => {
       target="_blank"
       title="Send email"
     >
-      Send Message
+      {t('sendMessage')}
       <EmailSend />
     </a>
   );

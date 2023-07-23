@@ -1,10 +1,11 @@
 import { ArrowExternal } from '../icons/ArrowExternal';
-
+import { useTranslation } from 'react-i18next';
 interface Props {
   className?: string;
 }
 
 export const PlayStore = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <a
       href="https://play.google.com/store/apps/details?id=com.oscar.diaz"
@@ -14,7 +15,7 @@ export const PlayStore = ({ className }: Props) => {
       className="social__anchor"
     >
       <span className="social__svgspan">
-        Link to my App
+        {t('myApp')}
         <ArrowExternal />
       </span>
 

@@ -38,13 +38,12 @@ export const Portfolio = () => {
         <Footer className="{animate__animated animate__fadeInUp animate__delay-3s}" />
       </footer>
 
-      <Konami className="{animate__animated animate__pulse}" />
-
       {onBottom ? (
         <ScrollTop className={'home__svg animate__animated animate__fadeInRight'} />
       ) : (
         <ScrollDown className={'home__svg animate__animated animate__fadeInRight'} />
       )}
+      <Konami className="{animate__animated animate__pulse}" />
     </>
   );
 };

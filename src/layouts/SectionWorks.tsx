@@ -1,11 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { ArrowExternal } from '../assets/icons/ArrowExternal';
 import { designsItems, worksItems } from '../helpers/json/';
 import { SectionTitle, SectionSubtitle } from '../components/';
 import { WorkInfo, WorkTags, WorkButton, WorkPicture } from '../components/Works/';
 
+import i18n from '../lang/i18n';
+import { useTranslation } from 'react-i18next';
 enum buttonType {
   Behance = 'Behance',
-  More = 'View More',
+  More = 'View_More',
   Github = 'Github',
   Live = 'Live',
 }
@@ -16,11 +19,14 @@ interface Props {
 
 export const SectionWorks = ({ className }: Props) => {
   const widthOutput = window.screen.width;
+  const lang: string = i18n.language || 'en';
+
+  const { t } = useTranslation();
 
   return (
     <section className={`works ${className}`} id="works">
-      <SectionTitle title="Works" />
-      <SectionSubtitle title="Front-end, developer" style={{ padding: '3rem 0 2rem' }} />
+      <SectionTitle title={t('Works')} />
+      <SectionSubtitle title={t('frontend_title')} style={{ padding: '3rem 0 2rem' }} />
       <div className="works__container">
         {/* Only show 2 items if the user joins as mobile user */}
         {widthOutput > 768
@@ -29,7 +35,7 @@ export const SectionWorks = ({ className }: Props) => {
                 <div className="works__work" key={i}>
                   <WorkPicture work={work.img} />
                   <div className="work__data">
-                    <WorkInfo name={work.name} description={work.description} />
+                    <WorkInfo name={work.name} description={work.description[lang]} />
                     <WorkTags work={work} />
                     <div className="work__buttons">
                       <WorkButton work={work.anchor_live} button={buttonType.Live} />
@@ -44,7 +50,7 @@ export const SectionWorks = ({ className }: Props) => {
                 <div className="works__work" key={i}>
                   <WorkPicture work={work.img} />
                   <div className="work__data">
-                    <WorkInfo name={work.name} description={work.description} />
+                    <WorkInfo name={work.name} description={work.description[lang]} />
                     <WorkTags work={work} />
                     <div className="work__buttons">
                       <WorkButton work={work.anchor_live} button={buttonType.Live} />
@@ -61,15 +67,15 @@ export const SectionWorks = ({ className }: Props) => {
           href="https://github.com/OscarFDiaz"
           rel="noopener noreferrer"
           target="_blank"
-          title="Link to Github"
+          title={t('toGithub')}
         >
-          <h2 className="empty__title">See all</h2>
+          <h2 className="empty__title">{t('see_all')}</h2>
           <ArrowExternal />
         </a>
       </div>
 
       {/* DESIGNS */}
-      <SectionSubtitle title="Designs, UI Designer" style={{ padding: '3rem 0 2rem' }} />
+      <SectionSubtitle title={t('design_title')} style={{ padding: '3rem 0 2rem' }} />
       <div className="works__container">
         {widthOutput > 768
           ? designsItems.map((design, i) => (
@@ -111,9 +117,9 @@ export const SectionWorks = ({ className }: Props) => {
           href="https://www.behance.net/oscarofda"
           rel="noopener noreferrer"
           target="_blank"
-          title="Link to Behance"
+          title={t('toBehance')}
         >
-          <h2 className="empty__title">See all</h2>
+          <h2 className="empty__title">{t('see_all')}</h2>
           <ArrowExternal />
         </a>
       </div>

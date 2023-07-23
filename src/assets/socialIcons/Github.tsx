@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowExternal } from '../icons/ArrowExternal';
 
 interface Props {
@@ -5,6 +6,7 @@ interface Props {
 }
 
 export const Github = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <a
       href="https://github.com/OscarFDiaz"
@@ -14,7 +16,7 @@ export const Github = ({ className }: Props) => {
       className="social__anchor"
     >
       <span className="social__svgspan">
-        Link to my Github
+        {t('toGithub')}
         <ArrowExternal />
       </span>
       <svg

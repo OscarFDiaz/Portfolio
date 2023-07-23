@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { SectionSubtitle, SectionTitle } from '../components';
 import { ContactButton } from '../components/Contact/ContactButton';
 
@@ -6,10 +7,11 @@ interface Props {
 }
 
 export const SectionContact = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <section className={`contact ${className}`} id="contact">
-      <SectionTitle title="Contact" />
-      <SectionSubtitle title="Love to hear from you" />
+      <SectionTitle title={t('Contact')} />
+      <SectionSubtitle title={t('loveTo')} />
       <ContactButton />
     </section>
   );

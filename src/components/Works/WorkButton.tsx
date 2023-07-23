@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowExternal, BehanceSmall, GithubSmall } from '../../assets/icons';
 
 interface Props {
@@ -10,12 +11,14 @@ interface Props {
 }
 enum buttonType {
   Behance = 'Behance',
-  More = 'View More',
+  More = 'View_More',
   Github = 'Github',
   Live = 'Live',
 }
 
 export const WorkButton = ({ work, button, className }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <a
       {...work}
@@ -25,7 +28,7 @@ export const WorkButton = ({ work, button, className }: Props) => {
       className={`button__anchor ${className ? className : ''}`}
     >
       {/* Title for the button and the icon */}
-      {button}
+      {t(button)}
       {button === buttonType.Live ? (
         <ArrowExternal />
       ) : button === buttonType.Github ? (

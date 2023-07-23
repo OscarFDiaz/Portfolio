@@ -14,14 +14,19 @@ import {
 
 interface Props {
   id: number;
-  name: string;
+  name: {
+    [key: string]: string;
+  };
   icons: JSX.Element[];
 }
 
 export const stackItems: Props[] = [
   {
     id: 1,
-    name: 'Web',
+    name: {
+      en: 'Web',
+      es: 'Web',
+    },
     icons: [
       <Html className="icons__svg" />,
       <Css className="icons__svg" />,
@@ -31,22 +36,34 @@ export const stackItems: Props[] = [
   },
   {
     id: 2,
-    name: 'Languages',
+    name: {
+      en: 'Languages',
+      es: 'Lenguajes',
+    },
     icons: [<Js className="icons__svg" />, <Ts className="icons__svg" />],
   },
   {
     id: 3,
-    name: 'Design',
+    name: {
+      en: 'Design',
+      es: 'Diseño',
+    },
     icons: [<Photoshop className="icons__svg" />, <Figma className="icons__svg" />],
   },
   {
     id: 4,
-    name: 'Frameworks & libraries',
+    name: {
+      en: 'Frameworks & libraries',
+      es: 'Frameworks y librerías',
+    },
     icons: [<React className="icons__svg" />],
   },
   {
     id: 5,
-    name: 'Other',
+    name: {
+      en: 'Other',
+      es: 'Otros',
+    },
     icons: [
       <Git className="icons__svg" />,
       <VisualCode className="icons__svg icons__svg--last" />,

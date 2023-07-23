@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ArrowExternal } from '../icons/ArrowExternal';
 
 interface Props {
@@ -5,6 +6,8 @@ interface Props {
 }
 
 export const LinkedIn = ({ className }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <a
       href="https://www.linkedin.com/in/oscarfcodiaz/"
@@ -14,7 +17,7 @@ export const LinkedIn = ({ className }: Props) => {
       className="social__anchor"
     >
       <span className="social__svgspan">
-        Link to my LinkedIn
+        {t('toLinkedin')}
         <ArrowExternal />
       </span>
       <svg

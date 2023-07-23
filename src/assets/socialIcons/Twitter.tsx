@@ -1,10 +1,12 @@
 import { ArrowExternal } from '../icons/ArrowExternal';
-
+import { useTranslation } from 'react-i18next';
 interface Props {
   className?: string;
 }
 
 export const Twitter = ({ className }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <a
       href="https://twitter.com/OscarOFDA"
@@ -14,7 +16,7 @@ export const Twitter = ({ className }: Props) => {
       className="social__anchor"
     >
       <span className="social__svgspan">
-        Link to my Twitter
+        {t('toTwitter')}
         <ArrowExternal />
       </span>
       <svg

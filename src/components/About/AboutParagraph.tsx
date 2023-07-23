@@ -1,14 +1,10 @@
 import { ArrowExternal } from '../../assets/icons/ArrowExternal';
-
+import { useTranslation } from 'react-i18next';
 export const AboutParagraph = () => {
+  const { t } = useTranslation();
   return (
     <p className="about__paragraph">
-      Freelance UI designer and frontend developer based in Guadalajara, Mexico. Graduated
-      in Computer Engineering from the Universidad de Guadalajara CUCEI, where I acquired
-      skills in programming, databases, working methodologies, etc. &#10;&#10; My passion
-      lies in creating applications with attractive and functional designs, my future goal
-      is to work with a company where I can become a senior Front-End developer.&#10;&#10;
-      Have developed a personal finance app available on Play Store called{'  '}
+      {t('about_p1', { spacer: '\n' })}
       <a
         href="https://play.google.com/store/apps/details?id=com.oscar.diaz"
         title="Playstore link to my app"
@@ -18,12 +14,9 @@ export const AboutParagraph = () => {
       >
         Flynanz <ArrowExternal />
       </a>
-      {'  '}
-      and I continue to work on personal projects. &#10;&#10;In my free time, I enjoy
-      watching series, movies, reading and playing video games. Find inspiration in simple
-      things and believe in balancing work and leisure. Excited for future opportunities
-      and open to interesting collaborations. &#10; &#10;
-      <b className="about__b">Contact me to create something amazing together!</b>
+      {t('about_p2', { spacer: '\n' })}
+
+      <b className="about__b">{t('about_contact')}</b>
     </p>
   );
 };

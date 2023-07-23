@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Behance, Github, LinkedIn, PlayStore, Twitter } from '../assets/socialIcons';
 
 interface Props {
@@ -5,10 +6,12 @@ interface Props {
 }
 
 export const SocialIcons = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <div className={`social__container ${className}`}>
       <h2 className="social__h2">
-        <span className="social__span">#</span>Social links
+        <span className="social__span">#</span>
+        {t('SocialLinks')}
       </h2>
       <div className="social__icons">
         <LinkedIn className="social__svg" />

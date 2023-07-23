@@ -1,7 +1,9 @@
 interface Props {
   id: number;
   name: string;
-  description: string;
+  description: {
+    [key: string]: string;
+  };
   img: {
     src: string;
     alt: string;
@@ -21,8 +23,10 @@ export const worksItems: Props[] = [
   {
     id: 1,
     name: 'Flynanz',
-    description:
-      'Aplicación movil, para el control de gastos y manejo de finanzas personales. 💸',
+    description: {
+      es: 'Aplicación movil, para el control de gastos y manejo de finanzas personales. 💸',
+      en: 'Mobile application for expense tracking and personal finance management. 💸',
+    },
     img: {
       src: 'https://camo.githubusercontent.com/80d27b366c1b176e9d563db049c8a5df70527ae9e085501c238e78e3d5c26e45/68747470733a2f2f692e696d6775722e636f6d2f49524e303576622e706e67',
       alt: 'Imagen promocional Flynanz',
@@ -40,7 +44,10 @@ export const worksItems: Props[] = [
   {
     id: 2,
     name: 'MERN Calendar',
-    description: '📅 Aplicación React para crear un calendario de eventos [MERN]',
+    description: {
+      es: '📅 Aplicación React para crear un calendario de eventos [MERN]',
+      en: '📅 React application to create an event calendar [MERN].',
+    },
     img: {
       src: 'https://i.imgur.com/oMrZDLF.png',
       alt: 'Imagen de la aplicación',
@@ -58,7 +65,10 @@ export const worksItems: Props[] = [
   {
     id: 3,
     name: 'Diario Personal',
-    description: '📰 Aplicación React para crear un diario personal',
+    description: {
+      es: '📰 Aplicación React para crear un diario personal',
+      en: '📰 React application for creating a personal diary',
+    },
     img: {
       src: 'https://i.imgur.com/qhlxj2f.png',
       alt: 'Imagen de la aplicación',
@@ -76,7 +86,10 @@ export const worksItems: Props[] = [
   {
     id: 4,
     name: 'Heroes App',
-    description: '🦸‍♀️ Aplicación React de heroes de DC y Marvel',
+    description: {
+      es: '🦸‍♀️ Aplicación React de heroes de DC y Marvel',
+      en: '🦸‍♀️ DC and Marvel heroes React application',
+    },
     img: {
       src: 'https://i.imgur.com/TeZaTFS.png',
       alt: 'Imagen de la aplicación',
@@ -94,8 +107,10 @@ export const worksItems: Props[] = [
   {
     id: 5,
     name: 'AddWatermark',
-    description:
-      '📷 Permite añadir una marca de agua a una o más imágenes, para descargarlas',
+    description: {
+      es: '📷 Permite añadir una marca de agua a una o más imágenes, para descargarlas',
+      en: '📷 Allows you to add a watermark to one or more images for downloading.',
+    },
     img: {
       src: 'https://i.imgur.com/ibCGp5H.png',
       alt: 'Imagen de la aplicación',

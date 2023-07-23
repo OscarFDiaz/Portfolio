@@ -1,13 +1,15 @@
-//TODO change each paragraph depending on the user select ES or En
+import { useTranslation } from 'react-i18next';
+
 export const HomeAbout = () => {
+  const { t } = useTranslation();
   return (
     <div className="home__shortabout">
       <p className="shortabout__paragraph">
-        Graduated in <b className="paragraph__b">Computer Engineering</b> from the
-        Universidad de Guadalajara CUCEI. &#10; &#10; Current focus as{' '}
-        <b className="paragraph__b">Front-End Developer</b>, I have experience in UI and
-        UX design. &#10; Passionate about creating attractive and functional interfaces
-        that improve the user experience.
+        {t('graduated')}
+        <b className="paragraph__b">{t('career')}</b> {t('from')} &#10; &#10;
+        {t('focus1')}
+        <b className="paragraph__b">{t('focus')}</b>
+        {t('exp', { spacer: '\n' })} &#10;
       </p>
     </div>
   );
