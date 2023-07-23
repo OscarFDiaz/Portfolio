@@ -9,7 +9,7 @@ $b2: #c778dd;
 .footer {
   background-color: #222223;
   padding: 4rem;
-
+  text-align: center;
   @include flex(column, center, center, center);
   &__p {
     @include font(1.25rem, 500, uppercase);

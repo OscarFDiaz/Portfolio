@@ -41,7 +41,7 @@ $padding: 2rem;
     .anchor__hash {
       color: $b2;
       font-weight: 600;
-      transition: color 0.5s linear;
+      transition: color, font-weight, 0.5s linear;
     }
   }
 }

@@ -217,7 +217,7 @@ body {
 .item__anchor:hover .anchor__hash {
   color: #c778dd;
   font-weight: 600;
-  transition: color 0.5s linear;
+  transition: color, font-weight, 0.5s linear;
 }
 
 .name__arrow {
@@ -1105,6 +1105,7 @@ body {
 .footer {
   background-color: #222223;
   padding: 4rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
