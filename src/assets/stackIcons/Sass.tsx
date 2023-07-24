@@ -5,7 +5,9 @@ interface Props {
 export const Sass = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">SASS</span>
+      <span className={'icons__span animate__animated animate__fadeIn animate__faster'}>
+        SASS
+      </span>
       <svg
         className="icons__icon"
         width="45"

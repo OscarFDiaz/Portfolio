@@ -16,6 +16,26 @@ export const Footer = ({ className }: Props) => {
       <p className="footer__p footer__p--litle">
         <span className="footer__span">#</span>
         {t('konami')}
+        <span
+          className="footer__span"
+          style={{
+            display: 'flex',
+            gap: '1rem',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <kbd>↑</kbd>
+          <kbd>↑</kbd>
+          <kbd>↓</kbd>
+          <kbd>↓</kbd>
+          <kbd>⟵</kbd>
+          <kbd>⟶</kbd>
+          <kbd>⟵</kbd>
+          <kbd>⟶</kbd>
+          <kbd>B</kbd>
+          <kbd>A</kbd>
+        </span>
       </p>
     </div>
   );

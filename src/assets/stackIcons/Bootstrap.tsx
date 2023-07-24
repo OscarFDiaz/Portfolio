@@ -5,7 +5,9 @@ interface Props {
 export const Bootstrap = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">Bootstrap</span>
+      <span className={'icons__span animate__animated animate__fadeIn animate__faster'}>
+        Bootstrap
+      </span>
       <svg
         className="icons__icon"
         width="45"

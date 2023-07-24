@@ -15,7 +15,7 @@ export const Github = ({ className }: Props) => {
       title="Github link"
       className="social__anchor"
     >
-      <span className="social__svgspan">
+      <span className={'social__svgspan animate__animated animate__fadeIn'}>
         {t('toGithub')}
         <ArrowExternal />
       </span>

@@ -5,7 +5,7 @@ interface Props {
 export const Photoshop = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">Photoshop</span>
+      <span className={'icons__span animate__animated animate__fadeIn'}>Photoshop</span>
       <svg
         className="icons__icon"
         width="45"

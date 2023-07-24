@@ -15,7 +15,7 @@ export const Behance = ({ className }: Props) => {
       title="Behance link"
       className="social__anchor"
     >
-      <span className="social__svgspan">
+      <span className={'social__svgspan animate__animated animate__fadeIn'}>
         {t('toBehance')}
         <ArrowExternal />
       </span>

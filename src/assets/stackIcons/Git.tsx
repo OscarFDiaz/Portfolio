@@ -5,7 +5,7 @@ interface Props {
 export const Git = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">GIT</span>
+      <span className={'icons__span animate__animated animate__fadeIn'}>GIT</span>
       <svg
         className="icons__icon"
         width="45"

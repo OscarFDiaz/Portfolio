@@ -4,9 +4,10 @@ interface Props {
 
 export const Html = ({ className }: Props) => {
   return (
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     <div className={className}>
-      <span className="icons__span">HTML</span>
+      <span className={'icons__span animate__animated animate__fadeIn animate__faster'}>
+        HTML
+      </span>
       <svg
         className="icons__icon"
         width="45"

@@ -15,7 +15,8 @@ const konami_code = [
 
 let cursor = 0,
   animating = false,
-  intervalID: number | undefined;
+  intervalID: number | undefined,
+  scrollPosition: number;
 
 document.addEventListener('keydown', (e) => {
   e.key === konami_code[cursor] ? cursor++ : (cursor = 0);
@@ -36,6 +37,8 @@ document.addEventListener('keydown', (e) => {
 const startAnimation = () => {
   const konami_container = document.getElementById('konami_container');
 
+  scrollPosition = window.scrollY;
+
   if (konami_container) {
     konami_container.style.display = 'flex';
   }
@@ -52,6 +55,8 @@ const stopAnimation = () => {
   if (konami_container) {
     konami_container.style.display = 'none';
   }
+
+  window.scrollTo(0, scrollPosition);
 };
 
 const disableScroll = () => {

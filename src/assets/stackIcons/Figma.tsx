@@ -5,7 +5,7 @@ interface Props {
 export const Figma = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">Figma</span>
+      <span className={'icons__span animate__animated animate__fadeIn'}>Figma</span>
       <svg
         className="icons__icon"
         width="45"

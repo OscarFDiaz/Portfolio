@@ -5,7 +5,7 @@ interface Props {
 export const Ts = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">TypeScript</span>
+      <span className={'icons__span animate__animated animate__fadeIn'}>TypeScript</span>
       <svg
         className="icons__icon"
         width="45"

@@ -5,7 +5,7 @@ interface Props {
 export const VisualCode = ({ className }: Props) => {
   return (
     <div className={className}>
-      <span className="icons__span">Visual Code</span>
+      <span className={'icons__span animate__animated animate__fadeIn'}>Visual Code</span>
       <svg
         className="icons__icon"
         width="45"

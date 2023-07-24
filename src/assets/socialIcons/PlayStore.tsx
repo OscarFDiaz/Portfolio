@@ -14,7 +14,7 @@ export const PlayStore = ({ className }: Props) => {
       title="Playstore link"
       className="social__anchor"
     >
-      <span className="social__svgspan">
+      <span className={'social__svgspan animate__animated animate__fadeIn'}>
         {t('myApp')}
         <ArrowExternal />
       </span>

@@ -15,7 +15,7 @@ export const Twitter = ({ className }: Props) => {
       title="Twitter link"
       className="social__anchor"
     >
-      <span className="social__svgspan">
+      <span className={'social__svgspan animate__animated animate__fadeIn'}>
         {t('toTwitter')}
         <ArrowExternal />
       </span>

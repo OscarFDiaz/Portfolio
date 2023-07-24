@@ -16,7 +16,7 @@ export const LinkedIn = ({ className }: Props) => {
       title="LinkedIn link"
       className="social__anchor"
     >
-      <span className="social__svgspan">
+      <span className={'social__svgspan animate__animated animate__fadeIn'}>
         {t('toLinkedin')}
         <ArrowExternal />
       </span>
