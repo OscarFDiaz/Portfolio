@@ -26,16 +26,22 @@ export const Portfolio = () => {
   return (
     <>
       <header>
-        <Navigator className="{animate__animated animate__fadeInDown}" />
+        <Navigator className={'animate__animated animate__fadeInDown'} />
       </header>
       <main>
-        <SectionMain className="{animate__animated animate__fadeInUp}" />
-        <SectionAbout className="{animate__animated animate__fadeInUp animate__delay-3s}" />
-        <SectionWorks className="{animate__animated animate__fadeInUp animate__delay-3s}" />
-        <SectionContact className="{animate__animated animate__fadeInUp animate__delay-3s}" />
+        <SectionMain className={'animate__animated animate__fadeInUp'} />
+        <SectionAbout
+          className={'animate__animated animate__fadeInUp animate__delay-3s'}
+        />
+        <SectionWorks
+          className={'animate__animated animate__fadeInUp animate__delay-3s'}
+        />
+        <SectionContact
+          className={'animate__animated animate__fadeInUp animate__delay-3s'}
+        />
       </main>
       <footer>
-        <Footer className="{animate__animated animate__fadeInUp animate__delay-3s}" />
+        <Footer className={'animate__animated animate__fadeInUp animate__delay-3s'} />
       </footer>
 
       {onBottom ? (
@@ -43,7 +49,7 @@ export const Portfolio = () => {
       ) : (
         <ScrollDown className={'home__svg animate__animated animate__fadeInRight'} />
       )}
-      <Konami className="{animate__animated animate__pulse}" />
+      <Konami className={'animate__animated animate__pulse'} />
     </>
   );
 };
