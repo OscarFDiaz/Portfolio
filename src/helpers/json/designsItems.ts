@@ -41,15 +41,15 @@ export const designsItems: Props[] = [
   },
   {
     id: 3,
-    name: 'AIRGRO',
+    name: 'VIRTECH',
     img: {
-      src: 'https://mir-s3-cdn-cf.behance.net/projects/808/c66881172646759.Y3JvcCw2MDYwLDQ3NDAsMCww.jpg',
-      alt: 'Image AIRGRO',
+      src: 'https://mir-s3-cdn-cf.behance.net/projects/808/b3d4e6176257477.Y3JvcCwyNDI0LDE4OTYsMCww.png',
+      alt: 'Image Virtech',
     },
-    tags: ['FIGMA', 'ECOMMERCE', 'STORE'],
+    tags: ['FIGMA', 'REDESING', 'WEB'],
     anchor_behance: {
-      href: 'https://www.behance.net/gallery/172646759/AIRGRO-APP-UI-DESIGN',
-      title: 'Link to AIRGRO design',
+      href: 'https://www.behance.net/gallery/176257477/VIRTECH-REDESIGN-WEB-UI-DESIGN',
+      title: 'Link to VIRTECH design',
     },
   },
   {
