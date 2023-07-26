@@ -1,0 +1,17 @@
+# 🖥 💻 Portafolio web
+
+📰 Portafolio creado usando <b>Vite + React, animate.css, i18next, SASS, TypeScript</b>.
+
+![Imagen web](https://mir-s3-cdn-cf.behance.net/projects/808/b2f669176252079.Y3JvcCwyNDI0LDE4OTYsMCww.png)
+
+## Online
+
+🔗 Link web
+
+https://oscardiaz.site/
+
+---
+
+## Authors
+
+- [@OscarFDiaz](https://github.com/OscarFDiaz)
