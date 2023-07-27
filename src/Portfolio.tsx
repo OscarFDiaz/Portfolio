@@ -31,17 +31,17 @@ export const Portfolio = () => {
       <main>
         <SectionMain className={'animate__animated animate__fadeInUp'} />
         <SectionAbout
-          className={'animate__animated animate__fadeInUp animate__delay-3s'}
+          className={'animate__animated animate__fadeInUp animate__delay-2s'}
         />
         <SectionWorks
-          className={'animate__animated animate__fadeInUp animate__delay-3s'}
+          className={'animate__animated animate__fadeInUp animate__delay-2s'}
         />
         <SectionContact
-          className={'animate__animated animate__fadeInUp animate__delay-3s'}
+          className={'animate__animated animate__fadeInUp animate__delay-2s'}
         />
       </main>
       <footer>
-        <Footer className={'animate__animated animate__fadeInUp animate__delay-3s'} />
+        <Footer className={'animate__animated animate__fadeInUp animate__delay-2s'} />
       </footer>
 
       {onBottom ? (

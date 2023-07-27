@@ -67,7 +67,7 @@ export const worksItems: Props[] = [
     name: 'Diario Personal',
     description: {
       es: '📰 Aplicación React para crear un diario personal',
-      en: '📰 React application for creating a personal diary',
+      en: '📰 React application to create a personal diary',
     },
     img: {
       src: 'https://i.imgur.com/qhlxj2f.png',

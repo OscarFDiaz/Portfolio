@@ -14,9 +14,9 @@ export const SectionMain = ({ className }: Props) => {
       />
       <HomeImgText />
       <HomeAbout />
-      <HomeButton className={'animate__animated animate__fadeInUp animate__delay-2s'} />
+      <HomeButton className={'animate__animated animate__fadeInUp animate__delay-1s'} />
 
-      <SocialIcons className={'animate__animated animate__fadeInUp animate__delay-3s'} />
+      <SocialIcons className={'animate__animated animate__fadeInUp animate__delay-1s'} />
     </section>
   );
 };
