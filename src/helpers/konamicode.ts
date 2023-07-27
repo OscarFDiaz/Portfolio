@@ -24,7 +24,6 @@ document.addEventListener('keydown', (e) => {
   // Leave animation
   if (animating) {
     stopAnimation();
-    enableScroll();
   }
 
   if (cursor === konami_code.length) {
@@ -48,7 +47,7 @@ const startAnimation = () => {
   disableScroll();
 };
 
-const stopAnimation = () => {
+export const stopAnimation = () => {
   clearInterval(intervalID);
   const konami_container = document.getElementById('konami_container');
 
@@ -57,6 +56,7 @@ const stopAnimation = () => {
   }
 
   window.scrollTo(0, scrollPosition);
+  enableScroll();
 };
 
 const disableScroll = () => {
