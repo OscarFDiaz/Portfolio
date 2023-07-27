@@ -508,6 +508,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  align-self: flex-start;
   border: 2px solid #c778dd;
   text-transform: uppercase;
   font-weight: 500;
@@ -687,6 +688,7 @@ body {
 .imagetext__picture {
   width: 10.9375rem;
   height: 10.9375rem;
+  align-self: center;
 }
 @media (max-width: 480px) {
   .imagetext__picture {

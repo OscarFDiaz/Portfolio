@@ -36,6 +36,7 @@ $b3: #abb2bf;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    align-self: flex-start;
 
     border: 2px solid $b2;
     text-transform: uppercase;
@@ -184,6 +185,7 @@ $b3: #abb2bf;
   &__picture {
     width: 10.9375rem;
     height: 10.9375rem;
+    align-self: center;
     @include media(480px) {
       margin: 0 auto;
     }
