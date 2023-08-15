@@ -695,6 +695,9 @@ body {
     margin: 0 auto;
   }
 }
+.imagetext__picture img {
+  border-radius: 50%;
+}
 .imagetext__picture:hover {
   /* Blur_Shadow */
   border-radius: 50%;

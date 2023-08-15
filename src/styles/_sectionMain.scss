@@ -190,6 +190,10 @@ $b3: #abb2bf;
       margin: 0 auto;
     }
 
+    & img {
+      border-radius: 50%;
+    }
+
     &:hover {
       /* Blur_Shadow */
       border-radius: 50%;
