@@ -16,6 +16,9 @@ export const HomeImgText = () => {
           <p className="subtitle__subtitles">
             <span className="subtitles__span">Front-end developer</span>
             <span className="subtitles__span">UI Designer</span>
+            <span className="subtitles__span">Computer Engineer</span>
+            <span className="subtitles__span">Front-end developer</span>
+            <span className="subtitles__span">UI Designer</span>
           </p>
         </div>
       </div>

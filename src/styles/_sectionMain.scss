@@ -243,14 +243,20 @@ $b3: #abb2bf;
     text-transform: uppercase;
     opacity: 0;
 
-    animation: topToBottom 5s linear infinite 0s;
+    animation: topToBottom 12.5s linear infinite 0s;
   }
 
-  &__span:nth-of-type(1) {
-    animation-delay: 1s;
-  }
-  &__span:nth-of-type(2) {
+  &__span:nth-child(2) {
     animation-delay: 2.5s;
+  }
+  &__span:nth-child(3) {
+    animation-delay: 5s;
+  }
+  &__span:nth-child(4) {
+    animation-delay: 7.5s;
+  }
+  &__span:nth-child(5) {
+    animation-delay: 10s;
   }
 }
 
@@ -260,19 +266,22 @@ $b3: #abb2bf;
   }
   5% {
     opacity: 0;
-    transform: translate3d(0, -20px, 0);
+    transform: translate3d(0px, -50px, 0px);
   }
   10% {
     opacity: 1;
-    transform: translate3d(0, 0px, 0);
+    transform: translate3d(0px, 0px, 0px);
   }
   25% {
     opacity: 1;
-    transform: translate3d(0, 0px, 0);
+    transform: translate3d(0px, 0px, 0px);
   }
   30% {
     opacity: 0;
-    transform: translate3d(0, 20px, 0);
+    transform: translate3d(0px, 50px, 0px);
+  }
+  80% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
