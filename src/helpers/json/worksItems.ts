@@ -85,22 +85,22 @@ export const worksItems: Props[] = [
   },
   {
     id: 4,
-    name: 'Heroes App',
+    name: 'Tlak!',
     description: {
-      es: '🦸‍♀️ Aplicación React de heroes de DC y Marvel',
-      en: '🦸‍♀️ DC and Marvel heroes React application',
+      es: '🌐 Aprende una palabra en inglés diariamente, con sonido y ejemplos',
+      en: '🌐 Learn an English word daily, with sound and examples',
     },
     img: {
-      src: 'https://i.imgur.com/TeZaTFS.png',
-      alt: 'Heroes app image',
+      src: 'https://i.imgur.com/dPMVa8b.jpg',
+      alt: 'Tlak app image',
     },
-    tags: ['BOOTSTRAP', 'ROUTERDOM', 'REACT'],
+    tags: ['TAILWIND', 'ZUSTAND', 'REACT'],
     anchor_live: {
-      href: 'https://oscarfdiaz.github.io/react-heroes-app/',
+      href: 'https://oscarfdiaz.github.io/TlakApp/',
       title: 'Link to online page',
     },
     anchor_github: {
-      href: 'https://github.com/OscarFDiaz/react-heroes-app',
+      href: 'https://github.com/OscarFDiaz/TlakApp',
       title: 'Link to Github repository',
     },
   },
