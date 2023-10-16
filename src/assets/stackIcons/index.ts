@@ -9,3 +9,4 @@ export * from './React';
 export * from './Sass';
 export * from './Ts';
 export * from './VisualCode';
+export * from './Tailwind';

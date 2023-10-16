@@ -8,6 +8,7 @@ import {
   Photoshop,
   React,
   Sass,
+  Tailwind,
   Ts,
   VisualCode,
 } from '../../assets/stackIcons';
@@ -32,6 +33,7 @@ export const stackItems: Props[] = [
       <Css className="icons__svg" />,
       <Bootstrap className="icons__svg" />,
       <Sass className="icons__svg" />,
+      <Tailwind className="icons__svg" />,
     ],
   },
   {
