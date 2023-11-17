@@ -840,7 +840,6 @@ body {
 }
 .work__image {
   height: 100%;
-  filter: grayscale(1);
 }
 .work__tags {
   display: flex;
@@ -964,7 +963,6 @@ body {
   transition: box-shadow 200ms ease;
 }
 .works__work:hover .work__image {
-  filter: grayscale(0);
   transform: scale(1.03);
   overflow: hidden;
   transition: grayscale, transform, 0.3s linear;
@@ -984,7 +982,6 @@ body {
     box-shadow: 0px 6px 40px 0px rgba(112, 144, 176, 0.2);
   }
   .works__work .work__image {
-    filter: grayscale(0);
     overflow: hidden;
   }
   .works__work .work__title {

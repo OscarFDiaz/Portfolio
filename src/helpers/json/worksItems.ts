@@ -24,7 +24,7 @@ export const worksItems: Props[] = [
     id: 1,
     name: 'Flynanz',
     description: {
-      es: 'Aplicación movil, para el control de gastos y manejo de finanzas personales. 💸',
+      es: 'Aplicación móvil, para el control de gastos y manejo de finanzas personales. 💸',
       en: 'Mobile application for expense tracking and personal finance management. 💸',
     },
     img: {
@@ -49,7 +49,7 @@ export const worksItems: Props[] = [
       en: '📅 React application to create an event calendar [MERN].',
     },
     img: {
-      src: 'https://i.imgur.com/oMrZDLF.png',
+      src: 'https://i.imgur.com/RRGYgCP.png',
       alt: 'MERN app image',
     },
     tags: ['MERN', 'JS', 'AXIOS', 'ROUTERDOM'],
@@ -70,7 +70,7 @@ export const worksItems: Props[] = [
       en: '📰 React application to create a personal diary',
     },
     img: {
-      src: 'https://i.imgur.com/qhlxj2f.png',
+      src: 'https://i.imgur.com/UzSh2LU.png',
       alt: 'Diario app image',
     },
     tags: ['FIREBASE', 'REDUX', 'MUI', 'REACT'],
@@ -106,22 +106,22 @@ export const worksItems: Props[] = [
   },
   {
     id: 5,
-    name: 'AddWatermark',
+    name: 'EGEL: Help',
     description: {
-      es: '📷 Permite añadir una marca de agua a una o más imágenes, para descargarlas',
-      en: '📷 Allows you to add a watermark to one or more images for downloading.',
+      es: '📚👨‍🎓 Ayuda para estudiar el examen Ceneval EGEL Plus INFO',
+      en: '📚👨‍🎓 Help to study for the Ceneval EGEL Plus exam INFO',
     },
     img: {
-      src: 'https://i.imgur.com/ibCGp5H.png',
-      alt: 'Addwatermark app image',
+      src: 'https://i.imgur.com/Xl5bPXC.png',
+      alt: 'EGEL: Help app image',
     },
-    tags: ['JSZIP', 'JQUERY', 'HTML', 'CSS'],
+    tags: ['REACT', 'SASS', 'CSS', 'animate.css'],
     anchor_live: {
-      href: 'https://oscarfdiaz.github.io/AddWaterMarkToImage/',
+      href: 'https://oscarfdiaz.github.io/EGEL_Help/',
       title: 'Link to online page',
     },
     anchor_github: {
-      href: 'https://github.com/OscarFDiaz/AddWaterMarkToImage',
+      href: 'https://github.com/OscarFDiaz/EGEL_Help',
       title: 'Link to Github repository',
     },
   },

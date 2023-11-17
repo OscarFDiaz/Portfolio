@@ -28,19 +28,6 @@ export const designsItems: Props[] = [
   },
   {
     id: 2,
-    name: 'Envio Express',
-    img: {
-      src: 'https://mir-s3-cdn-cf.behance.net/projects/808/b68bf6174406569.Y3JvcCw2MDYwLDQ3NDAsMCww.jpg',
-      alt: 'Image envio express',
-    },
-    tags: ['FIGMA', 'FANCY', 'DELIVERY'],
-    anchor_behance: {
-      href: 'https://www.behance.net/gallery/174406569/ENVIO-EXPRESS-APP-APP-UI-DESIGN',
-      title: 'Link to envio express design',
-    },
-  },
-  {
-    id: 3,
     name: 'VIRTECH',
     img: {
       src: 'https://mir-s3-cdn-cf.behance.net/projects/808/b3d4e6176257477.Y3JvcCwyNDI0LDE4OTYsMCww.png',
@@ -53,16 +40,29 @@ export const designsItems: Props[] = [
     },
   },
   {
-    id: 4,
-    name: 'Delivery App',
+    id: 3,
+    name: 'Envio Express',
     img: {
-      src: 'https://mir-s3-cdn-cf.behance.net/projects/808/1eca04155321609.Y3JvcCwzMTQyLDI0NTgsMCww.jpg',
-      alt: 'Image Virtech',
+      src: 'https://mir-s3-cdn-cf.behance.net/projects/808/b68bf6174406569.Y3JvcCw2MDYwLDQ3NDAsMCww.jpg',
+      alt: 'Image envio express',
     },
-    tags: ['FIGMA', 'DELIVERY', 'FOOD', 'MENU'],
+    tags: ['FIGMA', 'FANCY', 'DELIVERY'],
     anchor_behance: {
-      href: 'https://www.behance.net/gallery/155321609/DELIVERY-APP-APP-DELIVERY-UI-DESIGN',
-      title: 'Link to Virtech delivery app design',
+      href: 'https://www.behance.net/gallery/174406569/ENVIO-EXPRESS-APP-APP-UI-DESIGN',
+      title: 'Link to envio express design',
+    },
+  },
+  {
+    id: 4,
+    name: 'Playez',
+    img: {
+      src: 'https://mir-s3-cdn-cf.behance.net/projects/808/13d206183116569.Y3JvcCwxMjEyLDk0OCwwLDA.jpg',
+      alt: 'Image Playez',
+    },
+    tags: ['FIGMA', 'TIKTOK', 'FOOTBALL'],
+    anchor_behance: {
+      href: 'https://www.behance.net/gallery/183116569/PLAYEZ-APP-UI-FOOTBALL-APP-UI-DESIGN',
+      title: 'Link to Playez app design',
     },
   },
   {
