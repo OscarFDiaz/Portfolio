@@ -64,7 +64,7 @@ export const worksItems: Props[] = [
   },
   {
     id: 3,
-    name: 'Diario Personal',
+    name: 'Personal Diary',
     description: {
       es: '📰 Aplicación React para crear un diario personal',
       en: '📰 React application to create a personal diary',
