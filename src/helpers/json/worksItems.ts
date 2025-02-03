@@ -28,7 +28,7 @@ export const worksItems: Props[] = [
       en: 'Mobile application for expense tracking and personal finance management. 💸',
     },
     img: {
-      src: 'https://camo.githubusercontent.com/752524630c123ede184ae2e53c19328e73b6ad2eaa1cf3c6a3022a9cfadb5308/68747470733a2f2f692e696d6775722e636f6d2f49524e303576622e706e67',
+      src: 'https://camo.githubusercontent.com/dab3b40342b973c5f53e55b2fd45becf88977ad47d4e9713b6159c7b86583396/68747470733a2f2f692e696d6775722e636f6d2f49524e303576622e706e67',
       alt: 'Flynanz image',
     },
     tags: ['JS', 'CSS', 'HTML', 'Cordova'],
