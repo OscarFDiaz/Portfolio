@@ -1,10 +1,10 @@
 import {
-  Bootstrap,
   Css,
   Figma,
   Git,
   Html,
   Js,
+  Next,
   Photoshop,
   React,
   Sass,
@@ -31,7 +31,6 @@ export const stackItems: Props[] = [
     icons: [
       <Html className="icons__svg" />,
       <Css className="icons__svg" />,
-      <Bootstrap className="icons__svg" />,
       <Sass className="icons__svg" />,
       <Tailwind className="icons__svg" />,
     ],
@@ -58,7 +57,7 @@ export const stackItems: Props[] = [
       en: 'Frameworks & libraries',
       es: 'Frameworks y librerías',
     },
-    icons: [<React className="icons__svg" />],
+    icons: [<React className="icons__svg" />, <Next className="icons__svg" />],
   },
   {
     id: 5,
