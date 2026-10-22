@@ -75,8 +75,8 @@ export const worksItems: Props[] = [
     },
     tags: ['JS', 'CSS', 'HTML', 'Cordova'],
     anchor_live: {
-      href: 'https://play.google.com/store/apps/details?id=com.oscar.diaz',
-      title: 'Link to Playstore',
+      href: 'https://oscarfdiaz.github.io/Flynanz_Web/',
+      title: 'Link to Web',
     },
     anchor_github: {
       href: 'https://github.com/OscarFDiaz/Flynanz_App',
