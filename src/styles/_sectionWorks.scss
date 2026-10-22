@@ -57,6 +57,7 @@ $b3: #abb2bf;
     @include flex(row, space-between);
     gap: 1rem;
     width: 100%;
+    margin-top: auto;
   }
   &__info {
     @include flex(column, flex-start, flex-start, flex-start);
@@ -65,6 +66,7 @@ $b3: #abb2bf;
 
   &__data {
     @include flex(column, flex-start, flex-start, flex-start);
+    flex: 1;
     gap: 1rem;
     padding: 1rem;
   }
@@ -122,6 +124,8 @@ $b3: #abb2bf;
     color: $white;
   }
   &__work {
+    display: flex;
+    flex-direction: column;
     border: 2px solid $b3;
     overflow: hidden;
 

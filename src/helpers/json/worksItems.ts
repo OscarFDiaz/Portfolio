@@ -22,6 +22,48 @@ interface Props {
 export const worksItems: Props[] = [
   {
     id: 1,
+    name: 'GasoMX',
+    description: {
+      es: '⛽ Encuentra gasolina barata en México en tiempo real. Compara precios de Regular, Premium y Diesel en gasolineras cerca de ti.',
+      en: '⛽ Find cheap gas in Mexico in real time. Compare Regular, Premium and Diesel prices at nearby stations.',
+    },
+    img: {
+      src: 'https://www.gasomx.app/og-image.jpg',
+      alt: 'GasoMX image',
+    },
+    tags: ['NEXT.JS', 'REACT', 'TS', 'TAILWIND'],
+    anchor_live: {
+      href: 'https://gasomx.app/',
+      title: 'Link to GasoMX',
+    },
+    anchor_github: {
+      href: 'https://github.com/OscarFDiaz',
+      title: 'Private repository',
+    },
+  },
+  {
+    id: 2,
+    name: 'Alcanza',
+    description: {
+      es: '💳 App de escritorio que lee tus estados de cuenta y te dice si te alcanza para pagar tus tarjetas sin intereses. Tus datos no salen de tu computadora.',
+      en: '💳 Desktop app that reads your bank statements and tells you if you can pay your credit cards without interest. Your data never leaves your computer.',
+    },
+    img: {
+      src: 'https://alcanzafinanzas.app/media/og.png',
+      alt: 'Alcanza app image',
+    },
+    tags: ['ELECTRON', 'REACT', 'TS', 'TAILWIND'],
+    anchor_live: {
+      href: 'https://alcanzafinanzas.app/',
+      title: 'Link to Alcanza',
+    },
+    anchor_github: {
+      href: 'https://github.com/OscarFDiaz/alcanza-releases',
+      title: 'Link to Github releases',
+    },
+  },
+  {
+    id: 3,
     name: 'Flynanz',
     description: {
       es: 'Aplicación móvil, para el control de gastos y manejo de finanzas personales. 💸',
@@ -42,7 +84,7 @@ export const worksItems: Props[] = [
     },
   },
   {
-    id: 2,
+    id: 4,
     name: 'MERN Calendar',
     description: {
       es: '📅 Aplicación React para crear un calendario de eventos [MERN]',
@@ -63,7 +105,7 @@ export const worksItems: Props[] = [
     },
   },
   {
-    id: 3,
+    id: 5,
     name: 'Personal Diary',
     description: {
       es: '📰 Aplicación React para crear un diario personal',
@@ -84,7 +126,7 @@ export const worksItems: Props[] = [
     },
   },
   {
-    id: 4,
+    id: 6,
     name: 'Tlak!',
     description: {
       es: '🌐 Aprende una palabra en inglés diariamente, con sonido y ejemplos',
@@ -105,7 +147,7 @@ export const worksItems: Props[] = [
     },
   },
   {
-    id: 5,
+    id: 7,
     name: 'EGEL: Help',
     description: {
       es: '📚👨‍🎓 Ayuda para estudiar el examen Ceneval EGEL Plus INFO',
