@@ -28,7 +28,7 @@ i18n.use(initReactI18next).init({
         toGithub: 'Link to my Github',
         toTwitter: 'Link to my X',
         toBehance: 'Link to my Behance',
-        myApp: 'Link to my App',
+        myApp: 'My apps on Google Play',
         about_p1:
           'Frontend developer based in Guadalajara, Mexico. Graduated in Computer Engineering from the Universidad de Guadalajara CUCEI, where I acquired skills in programming, databases, working methodologies, etc. {{spacer}}{{spacer}} My passion lies in creating applications with attractive and functional designs. Currently working as a Front-End Developer at ',
         about_p1_after:
@@ -71,7 +71,7 @@ i18n.use(initReactI18next).init({
         toGithub: 'Enlace a mi Github',
         toTwitter: 'Enlace a mi X',
         toBehance: 'Enlace a mi Behance',
-        myApp: 'Enlace a mi Aplicación ',
+        myApp: 'Mis apps en Google Play',
         about_p1:
           'Desarrollador Front-end con sede en Guadalajara, México. Graduado de Ingeniería en Informática por la Universidad de Guadalajara, donde adquirí habilidades en programación, bases de datos, metodologías de trabajo, etc. Mi pasión radica en crear aplicaciones con diseños atractivos y funcionales. Actualmente trabajando como Desarrollador Front-End en ',
         about_p1_after:
