@@ -8,10 +8,10 @@ export const PlayStore = ({ className }: Props) => {
   const { t } = useTranslation();
   return (
     <a
-      href="https://play.google.com/store/apps/details?id=com.oscar.diaz"
+      href="https://play.google.com/store/apps/developer?id=OscarFDA"
       rel="noopener noreferrer"
       target="_blank"
-      title="Playstore link"
+      title="Google Play developer profile"
       className="social__anchor"
     >
       <span className={'social__svgspan animate__animated animate__fadeIn'}>
