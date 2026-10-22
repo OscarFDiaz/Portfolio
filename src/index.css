@@ -871,6 +871,7 @@ body {
   align-content: center;
   gap: 1rem;
   width: 100%;
+  margin-top: auto;
 }
 .work__info {
   display: flex;
@@ -886,6 +887,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+  flex: 1;
   gap: 1rem;
   padding: 1rem;
 }
@@ -953,6 +955,8 @@ body {
   color: #fff;
 }
 .works__work {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #abb2bf;
   overflow: hidden;
 }

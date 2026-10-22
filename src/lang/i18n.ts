@@ -30,7 +30,10 @@ i18n.use(initReactI18next).init({
         toBehance: 'Link to my Behance',
         myApp: 'Link to my App',
         about_p1:
-          'Freelance UI designer and frontend developer based in Guadalajara, Mexico. Graduated in Computer Engineering from the Universidad de Guadalajara CUCEI, where I acquired skills in programming, databases, working methodologies, etc. {{spacer}}{{spacer}} My passion lies in creating applications with attractive and functional designs, my future goal is to work with a company where I can become a senior Front-End developer.{{spacer}} {{spacer}}Have developed a personal finance app available on Play Store called ',
+          'Frontend developer based in Guadalajara, Mexico. Graduated in Computer Engineering from the Universidad de Guadalajara CUCEI, where I acquired skills in programming, databases, working methodologies, etc. {{spacer}}{{spacer}} My passion lies in creating applications with attractive and functional designs. Currently working as a Front-End Developer at ',
+        about_p1_after:
+          '.{{spacer}} {{spacer}}Have developed several apps available on the Play Store: ',
+        about_and: ' and ',
         about_p2:
           ' and I continue to work on personal projects. {{spacer}}{{spacer}}In my free time, I enjoy watching series, movies, reading and playing video games. Find inspiration in simple things and believe in balancing work and leisure. Excited for future opportunities and open to interesting collaborations. {{spacer}}{{spacer}}',
         about_contact: 'Contact me to create something amazing together!',
@@ -70,7 +73,10 @@ i18n.use(initReactI18next).init({
         toBehance: 'Enlace a mi Behance',
         myApp: 'Enlace a mi Aplicación ',
         about_p1:
-          'Diseñador UI y desarrollador Front-end freelance con sede en Guadalajara, México. Graduado de Ingeniería en Informática por la Universidad de Guadalajara, donde adquirí habilidades en programación, bases de datos, metodologías de trabajo, etc. Mi pasión radica en crear aplicaciones con diseños atractivos y funcionales, mi objetivo a futuro es trabajar con una empresa en donde pueda convertirme en un desarrollador senior Front-End.{{spacer}}{{spacer}} He desarrollado una aplicación para finanzas personales disponible en Play Store llamada ',
+          'Desarrollador Front-end con sede en Guadalajara, México. Graduado de Ingeniería en Informática por la Universidad de Guadalajara, donde adquirí habilidades en programación, bases de datos, metodologías de trabajo, etc. Mi pasión radica en crear aplicaciones con diseños atractivos y funcionales. Actualmente trabajando como Desarrollador Front-End en ',
+        about_p1_after:
+          '.{{spacer}}{{spacer}} He desarrollado varias aplicaciones disponibles en Play Store: ',
+        about_and: ' y ',
         about_p2:
           ' y continúo trabajando en proyectos personales. {{spacer}}{{spacer}} En mi tiempo libre, disfruto de ver series, películas, leer y jugar videojuegos. Encuentro inspiración en las cosas simples y creo en el equilibrio entre el trabajo y el ocio. Estoy emocionado por las oportunidades futuras y abierto a colaboraciones interesantes. {{spacer}}{{spacer}}',
         about_contact: '¡Contáctame para crear algo increíble juntos!',
